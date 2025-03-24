@@ -67,16 +67,28 @@ export const BeamshyftFooter = () => (
       <FooterColumn>
         <h3 className="text-md pt-1 font-semibold">Social</h3>
         <Link
-          to="/"
+          to="https://instagram.com/beamshyft"
           className="text-sm text-muted-foreground"
         >
           Instagram
         </Link>
         <Link
-          to="/"
+          to="https://facebook.com/beamshyft"
           className="text-sm text-muted-foreground"
         >
           Facebook
+        </Link>
+        <Link
+          to="https://twitter.com/beamshyft"
+          className="text-sm text-muted-foreground"
+        >
+          Twitter
+        </Link>
+        <Link
+          to="https://linkedin.com/company/beamshyft"
+          className="text-sm text-muted-foreground"
+        >
+          LinkedIn
         </Link>
       </FooterColumn>
     </FooterContent>

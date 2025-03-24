@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import { Menu } from "lucide-react";
 
@@ -15,13 +15,24 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import BeamshyftLogo from "@/components/logos/beamshyft";
+import { Button, ButtonProps } from "./ui/button";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { name: "Catalog", path: "/catalog" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
-  { name: "Get a Quote", path: "/getaquote" },
 ];
+
+const QuoteButton = (props: React.JSX.IntrinsicAttributes & ButtonProps & React.RefAttributes<HTMLButtonElement>) => {
+  return (
+    <Button {...props} variant="outline" size="default" >
+      <Link to="/quote" className="gold-text">
+        Get a Quote
+      </Link>
+    </Button>
+  );
+}
 
 function HamburgerMenu() {
   const [open, setOpen] = React.useState(false);
@@ -58,6 +69,7 @@ function HamburgerMenu() {
               {item.name}
             </Link>
           ))}
+          <QuoteButton />
         </nav>
       </SheetContent>
     </Sheet>
@@ -65,10 +77,25 @@ function HamburgerMenu() {
 }
 
 export const BeamshyftHeader = () => {
+  const [isTransparent, setIsTransparent] = useState(true);
+  const pathname = usePathname();
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsTransparent(window.scrollY < 100 && pathname === "/");
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [pathname]);
   return (
     <div
       id="header"
       className="fixed w-full flex flex-row justify-between items-center px-4 py-4 bg-primary-foreground z-20 mh-36"
+      style={{
+        transition: "background-color 0.3s",
+        backgroundColor: isTransparent ? "transparent" : "hsl(var(--primary-foreground))",}}
     >
       <NavigationMenu>
         <NavigationMenuList>
@@ -91,6 +118,7 @@ export const BeamshyftHeader = () => {
         </NavigationMenuList>
       </NavigationMenu>
       <div className="self-end">
+        <QuoteButton className="hidden sm:block"/>
         <HamburgerMenu />
       </div>
     </div>

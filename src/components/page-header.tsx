@@ -22,7 +22,7 @@ const PageHeader = ({ title, description, imageSrc, children }: PageHeaderProps)
         {children}
       </div>
     </div>
-    <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-[1] bg-secondary opacity-30">
+    <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-[1] bg-secondary opacity-15">
       <Image
         src={imageSrc}
         layout="fill"

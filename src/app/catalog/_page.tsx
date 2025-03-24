@@ -4,7 +4,6 @@ import React, { useEffect } from "react";
 
 import { Button } from "@/components/ui/button";
 import InfoCard from "@/components/info-card";
-import Image from "next/image";
 
 import { FileDownload } from "@/components/file-download";
 import InfoSection from "@/components/info-section";
@@ -20,10 +19,10 @@ const Catalog: React.FC = () => {
     }
   };
   return (
-    <div className="flex flex-col bg-primary-foreground mt-[60px]">
+    <div className="flex flex-col bg-primary-foreground mt-[70px]">
       <PageHeader
         title="Our Catalog"
-        description="Browse our catalogs for our selection of cabinets, vanities, and doors."
+        description="Browse our catalogs for our diverse selection of cabinets, vanities, and doors. All fully customizable."
         imageSrc="/Imágenes Alta Catálogo ID/Cocina.jpg"
       >
         <FileDownload />

@@ -73,7 +73,7 @@
 
     --primary: 0 0% 98%;
 
-    --primary-foreground: 0 0% 9%;
+    --primary-foreground: 0 0% 4%;
 
     --secondary: 0 0% 14.9%;
 
@@ -135,7 +135,7 @@
   }
 
   .gold-text{
-    background: linear-gradient(41deg, rgba(255,219,122,1) 0%, rgba(240,150,33,1) 72%, rgba(255,253,239,1) 100%);
+    background: linear-gradient(41deg, rgba(255,219,122,1) 0%, rgb(197, 130, 42) 50%, rgb(255, 246, 179) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='ffdb7a',endColorstr='#fffdef',GradientType=1);
     background-clip: text;
     -webkit-text-fill-color: transparent;

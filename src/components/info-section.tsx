@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 interface InfoSectionProps {
-  title: string;
+  title: string | React.ReactNode;
   description?: string | React.ReactNode | undefined;
   number?: number;
   leftChild?: React.ReactNode;
@@ -69,8 +69,8 @@ const InfoSection = ({
           </div>
         </div>
         <div
-          className="flex flex-row gap-8"
-          style={{ order: reverse ? -1 : 1, flexDirection: reverse ? "row-reverse" : "row", }}
+          className="flex flex-row gap-8  justify-end"
+          style={{ order: reverse ? -1 : 1, flexDirection: reverse ? "row-reverse" : "row" }}
         >
           {rightChild}
           <div className="min-w-[40px]"></div>
