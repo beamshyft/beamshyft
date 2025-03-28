@@ -58,7 +58,7 @@ export const BeamshyftFooter = () => (
           Catalog
         </Link>
         <Link
-          to="/quote"
+          to="/contact"
           className="text-sm text-muted-foreground"
         >
           Get a quote

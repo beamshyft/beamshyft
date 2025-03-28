@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import InfoCard from "@/components/info-card";
 
 import { FileDownload } from "@/components/file-download";
-import InfoSection from "@/components/info-section";
 import PageHeader from "@/components/page-header";
 
 const Catalog: React.FC = () => {
@@ -68,21 +67,13 @@ const Catalog: React.FC = () => {
               </Button>
             }
           />
-          <div className="opacity-[30%]">
+          {/* <div className="opacity-[30%]">
             <InfoCard
               title="Decking, flooring, and more."
               description="Come back soon for our new selection."
               imageSrc="/coming_soon.png"
             />
-          </div>
-        </div>
-        <div className="bg-primary-foreground flex justify-center">
-          <div className="bg-transparent max-w-[1200px] pt-20 relative">
-            <InfoSection
-              title="Infinite combinations to match your style."
-              description="Browse our selection of cabinets, vanities, and doors."
-            />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

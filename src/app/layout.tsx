@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" style={{ colorScheme: "dark" /*, scrollBehavior: "smooth"*/}} className="dark" aria-readonly>
+    <html lang="en" style={{ colorScheme: "light" /*, scrollBehavior: "smooth"*/}} className="light" aria-readonly>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >

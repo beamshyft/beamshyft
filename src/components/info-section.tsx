@@ -26,7 +26,7 @@ const InfoSection = ({
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 800) {
+      if (window.innerWidth < 767) {
         setIsMobile(true);
       } else {
         setIsMobile(false);
@@ -51,9 +51,9 @@ const InfoSection = ({
             flexDirection: reverse ? "row-reverse" : "row",
           }}
         >
-          {number ? (
-            <div className="rounded-full bg-white flex items-center justify-center min-w-[40px] h-[40px]">
-              <p className="text-black text-2xl font-bold">{number}</p>
+          {number && !reverse ? (
+            <div className="rounded-full bg-accent/90 flex items-center justify-center min-w-[40px] h-[40px]">
+              <p className="text-white text-2xl font-bold">{number}</p>
             </div>
           ) : (
             <div className="min-w-[40px]"></div>
@@ -73,21 +73,27 @@ const InfoSection = ({
           style={{ order: reverse ? -1 : 1, flexDirection: reverse ? "row-reverse" : "row" }}
         >
           {rightChild}
-          <div className="min-w-[40px]"></div>
+          {number && reverse ? (
+            <div className="rounded-full bg-accent/90 flex items-center justify-center min-w-[40px] h-[40px]">
+              <p className="text-white text-2xl font-bold">{number}</p>
+            </div>
+          ) : (
+            <div className="min-w-[40px]"></div>
+          )}
         </div>
       </div>
     </section>
   ) : (
     <section className={`w-full bg-transparent min-h-[500px] relative`} style={height ? {minHeight: height} : {}}>
       <div className="flex flex-col gap-16 p-8">
-        <div className="flex flex-col gap-4 z-10">
+        <div className="flex flex-col gap-4 z-10 text-center">
           {number && (
-            <div className="rounded-full bg-white flex items-center justify-center min-w-[40px] w-[40px] h-[40px]">
-              <p className="text-black text-2xl font-bold">{number}</p>
+            <div className="rounded-full bg-accent/90 flex items-center justify-center min-w-[40px] w-[40px] h-[40px]">
+              <p className="text-white text-2xl font-bold">{number}</p>
             </div>
           )}
-          <h2 className="text-3xl font-bold">{title}</h2>
-          <p className="">{description}</p>
+          <h2 className={titleClassName ? titleClassName : "text-3xl font-bold"}>{title}</h2>
+          <p className="self-start">{description}</p>
           {leftChild && <div>{leftChild}</div>}
         </div>
         <div>{rightChild}</div>

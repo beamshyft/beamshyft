@@ -27,7 +27,7 @@ const navItems = [
 const QuoteButton = (props: React.JSX.IntrinsicAttributes & ButtonProps & React.RefAttributes<HTMLButtonElement>) => {
   return (
     <Button {...props} variant="outline" size="default" >
-      <Link to="/quote" className="gold-text">
+      <Link to="/contact" className="text-accent font-bold">
         Get a Quote
       </Link>
     </Button>
@@ -81,7 +81,7 @@ export const BeamshyftHeader = () => {
   const pathname = usePathname();
   useEffect(() => {
     const handleScroll = () => {
-      setIsTransparent(window.scrollY < 100 && pathname === "/");
+      setIsTransparent(window.scrollY < 100);
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll);
@@ -92,16 +92,17 @@ export const BeamshyftHeader = () => {
   return (
     <div
       id="header"
-      className="fixed w-full flex flex-row justify-between items-center px-4 py-4 bg-primary-foreground z-20 mh-36"
+      className="fixed w-full flex flex-row justify-between items-center px-4 md:px-20 py-4 bg-primary-foreground z-20 mh-36"
       style={{
-        transition: "background-color 0.3s",
-        backgroundColor: isTransparent ? "transparent" : "hsl(var(--primary-foreground))",}}
+        boxShadow: isTransparent ? "" : "#888 0px 0px 20px",
+        transition: "background-color 0.3s, box-shadow 0.3s",
+        backgroundColor: isTransparent && pathname === "/" ? "transparent" : "hsl(var(--primary-foreground))",}}
     >
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
             <Link to="/">
-              <BeamshyftLogo />
+              <BeamshyftLogo width={200}/>
             </Link>
           </NavigationMenuItem>
           {navItems.map((item, index) => (
@@ -111,13 +112,13 @@ export const BeamshyftHeader = () => {
                 to={item.path}
                 className={navigationMenuTriggerStyle()}
               >
-                {item.name}
+                <span className="font-bold">{item.name}</span>
               </Link>
             </NavigationMenuItem>
           ))}
         </NavigationMenuList>
       </NavigationMenu>
-      <div className="self-end">
+      <div className="self-center">
         <QuoteButton className="hidden sm:block"/>
         <HamburgerMenu />
       </div>

@@ -23,7 +23,7 @@
 
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 96.1%;
+    --secondary: 0 0% 95.1%;
 
     --secondary-foreground: 0 0% 9%;
 
@@ -31,7 +31,7 @@
 
     --muted-foreground: 0 0% 45.1%;
 
-    --accent: 0 0% 96.1%;
+    --accent: 82 67% 42%;
 
     --accent-foreground: 0 0% 9%;
 
@@ -130,8 +130,20 @@
     transform: scale(1.1); /* Zoom in on hover */
   }
 
+  .underline{
+    color: hsl(var(--accent));
+    font-weight: 500;
+  }
+
   p{
+    font-weight: 500;
     opacity: 0.8;
+    max-width: 400px;
+  }
+
+  a > svg{
+    width: 1.75rem!important;
+    height: 1.75rem!important;
   }
 
   .gold-text{
