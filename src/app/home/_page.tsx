@@ -11,18 +11,34 @@ import InfoSection from "../../components/info-section";
 import AlternatingText from "../../components/alternating-text";
 
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 
 const FeatureCard = ({
   caption,
   imageSrc,
   imageStyle,
+  index = 0,
 }: {
   caption: string;
   imageSrc: string;
   imageStyle?: React.CSSProperties;
+  index?: number;
 }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+    delay: 500,
+  });
+
   return (
-    <div className="flex flex-col gap-2 items-center w-[130px] sm:min-w-[170px]">
+    <div
+      ref={ref}
+      className={`flex flex-col gap-2 items-center w-[130px] sm:min-w-[170px] transition-opacity duration-1000`}
+      style={{
+        opacity: inView ? 1 : 0,
+        transitionDelay: `${index * 100}ms`,
+      }}
+    >
       <Image
         src={imageSrc}
         objectFit="cover"
@@ -34,7 +50,18 @@ const FeatureCard = ({
       <p className="max-w-[110px] text-sm sm:max-w-[170px]">{caption}</p>
     </div>
   );
-}
+};
+
+const PriceCard = ({ children }: { children: React.ReactNode }) => {
+
+  return (
+    <div
+      className={`h-full w-full relative flex flex-col items-center justify-center font-semibold`}
+    >
+      {children}
+    </div>
+  );
+};
 
 const Home: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -92,14 +119,21 @@ const Home: React.FC = () => {
           </div>
         </div>
         <div className="scroll-m-20 mt-200 text-secondary-background absolute bottom-8 z-[5]">
-          <ChevronsDown
-            size={50}
+          <div
+            className="relative cursor-pointer animate-bounce"
             onClick={() => {
               window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
             }}
-            color="white"
-            className="cursor-pointer"
-          />
+          >
+            <ChevronsDown
+              size={50}
+              color="white"
+              style={{
+                maskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)",
+                WebkitMaskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)",
+              }}
+            />
+          </div>
         </div>
         <div className="fixed top-0 left-0 w-full h-screen overflow-hidden z-[0] opacity-50">
           <video
@@ -164,6 +198,7 @@ const Home: React.FC = () => {
             ].map((feature, index) => (
               <FeatureCard
                 key={index}
+                index={index}
                 caption={feature.caption}
                 imageSrc={feature.imageSrc}
                 imageStyle={{ filter: `hue-rotate(${(300 / 8) * index}deg)` }}
@@ -176,31 +211,33 @@ const Home: React.FC = () => {
             description="We guarantee the best prices on the market. If you find a better price, we'll match it."
             titleClassName="text-4xl lg:text-5xl font-bold"
             rightChild={
-              <div className="h-full w-full relative flex flex-col items-center justify-center font-semibold gap-8 bg-white p-8 rounded-lg shadow-lg border-4 border-dashed border-red-500">
-                <div className="text-center">
-                  <p className="text-lg md:text-xl lg:text-2xl text-black">
-                    Small kitchen for
-                    <span className="text-red-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $3000 </span>
-                    instead of&nbsp;
-                    <span className="line-through text-gray-500 text-lg md:text-xl lg:text-2xl">$10,000</span>
-                  </p>
-                </div>
-                <div className="text-center">
-                  <p className="text-lg md:text-xl lg:text-2xl text-black">
-                    Medium kitchen for
-                    <span className="text-red-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $5000 </span>
-                    instead of&nbsp;
-                    <span className="line-through text-gray-500 text-lg md:text-xl lg:text-2xl">$20,000</span>
-                  </p>
-                </div>
-                <div className="text-center">
-                  <p className="text-lg md:text-xl lg:text-2xl text-black">
-                    Large kitchen for
-                    <span className="text-red-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $8,500 </span>
-                    instead of&nbsp;
-                    <span className="line-through text-gray-500 text-lg md:text-xl lg:text-2xl">$40,000</span>
-                  </p>
-                </div>
+
+
+              <div className="flex flex-col  gap-8 bg-white p-8 rounded-lg shadow-lg border-4 border-dashed border-red-500">
+                <PriceCard>
+                    <p className="text-lg md:text-xl lg:text-2xl text-black">
+                    - Small kitchen for
+                      <span className="text-red-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $3000 </span>
+                      instead of&nbsp;
+                      <span className="line-through text-gray-500 text-lg md:text-xl lg:text-2xl">$10,000</span>
+                    </p>
+                </PriceCard>
+                <PriceCard>
+                    <p className="text-lg md:text-xl lg:text-2xl text-black">
+                    - Medium kitchen for
+                      <span className="text-red-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $5000 </span>
+                      instead of&nbsp;
+                      <span className="line-through text-gray-500 text-lg md:text-xl lg:text-2xl">$20,000</span>
+                    </p>
+                </PriceCard>
+                <PriceCard>
+                    <p className="text-lg md:text-xl lg:text-2xl text-black">
+                    - Large kitchen for
+                      <span className="text-red-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $8,500 </span>
+                      instead of&nbsp;
+                      <span className="line-through text-gray-500 text-lg md:text-xl lg:text-2xl">$40,000</span>
+                    </p>
+                </PriceCard>
               </div>
             }
             leftChild={
@@ -245,7 +282,7 @@ const Home: React.FC = () => {
             rightChild={
               <div className="h-full w-full relative text-center">
                 <Image
-                  src="/animations/floorplans-2.gif"
+                  src="/animations/blueprint.gif"
                   objectFit="cover"
                   height={250}
                   width={250}

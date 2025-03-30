@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
                     href="tel:+18574887898"
                     className="underline text-xl"
                 >
-                    +1(857)-488-7898
+                    +1 (857) 488-7898
                 </a>
                 </Button>
                 <Button asChild size="lg" variant="outline">

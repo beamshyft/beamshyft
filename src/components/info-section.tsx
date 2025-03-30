@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 interface InfoSectionProps {
   title: string | React.ReactNode;
@@ -41,8 +42,18 @@ const InfoSection = ({
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const { ref: rightChildRef, inView: rightChildInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+    delay: 500,
+  });
+
   return !isMobile ? (
-    <section className={`w-full bg-transparent min-h-[500px] relative`} style={height ? {minHeight: height} : {}}>
+    <section
+      className={`w-full bg-transparent min-h-[500px] relative mb-10`}
+      style={height ? { minHeight: height } : {}}
+    >
       <div className="grid grid-cols-2 gap-16 p-8">
         <div
           className="flex flex-row gap-8"
@@ -53,29 +64,44 @@ const InfoSection = ({
         >
           {number && !reverse ? (
             <div className="rounded-full bg-accent2/90 flex items-center justify-center min-w-[40px] h-[40px]">
-              <p className="text-secondary-foreground text-2xl font-bold">{number}</p>
+              <p className="text-secondary-foreground text-2xl font-bold">
+                {number}
+              </p>
             </div>
           ) : (
             <div className="min-w-[40px]"></div>
           )}
-          <div className="flex flex-col gap-4 z-10" style={{alignItems: reverse ? "flex-end" : "flex-start"}}>
+          <div
+            className="flex flex-col gap-4 z-10"
+            style={{ alignItems: reverse ? "flex-end" : "flex-start" }}
+          >
             <h2
-              className={titleClassName ? titleClassName : "text-3xl font-bold"}
+              className={
+                titleClassName ? titleClassName : "text-3xl font-bold"
+              }
             >
               {title}
             </h2>
-            <p style={{textAlign: reverse ? "end" : "start"}}>{description}</p>
+            <p style={{ textAlign: reverse ? "end" : "start" }}>{description}</p>
             {leftChild}
           </div>
         </div>
         <div
-          className="flex flex-row gap-8  justify-end"
-          style={{ order: reverse ? -1 : 1, flexDirection: reverse ? "row-reverse" : "row" }}
+          ref={rightChildRef}
+          className={`flex flex-row gap-8 justify-end transition-opacity duration-1000 ${
+            rightChildInView ? "opacity-100" : "opacity-0"
+          }`}
+          style={{
+            order: reverse ? -1 : 1,
+            flexDirection: reverse ? "row-reverse" : "row",
+          }}
         >
           {rightChild}
           {number && reverse ? (
             <div className="rounded-full bg-accent2/90 flex items-center justify-center min-w-[40px] h-[40px]">
-              <p className="text-secondary-foreground text-2xl font-bold">{number}</p>
+              <p className="text-secondary-foreground text-2xl font-bold">
+                {number}
+              </p>
             </div>
           ) : (
             <div className="min-w-[40px]"></div>
@@ -84,19 +110,37 @@ const InfoSection = ({
       </div>
     </section>
   ) : (
-    <section className={`w-full bg-transparent min-h-[500px] relative`} style={height ? {minHeight: height} : {}}>
+    <section
+      className={`w-full bg-transparent min-h-[500px] relative`}
+      style={height ? { minHeight: height } : {}}
+    >
       <div className="flex flex-col gap-16 p-8">
         <div className="flex flex-col gap-4 z-10 text-center items-center">
           {number && (
             <div className="rounded-full bg-accent2/90 flex items-center justify-center min-w-[40px] w-[40px] h-[40px]">
-              <p className="text-secondary-foreground text-2xl font-bold">{number}</p>
+              <p className="text-secondary-foreground text-2xl font-bold">
+                {number}
+              </p>
             </div>
           )}
-          <h2 className={titleClassName ? titleClassName : "text-3xl font-bold"}>{title}</h2>
+          <h2
+            className={
+              titleClassName ? titleClassName : "text-3xl font-bold"
+            }
+          >
+            {title}
+          </h2>
           <p className="self-start">{description}</p>
           {leftChild && leftChild}
         </div>
-        <div>{rightChild}</div>
+        <div
+          ref={rightChildRef}
+          className={`transition-opacity duration-1000 ${
+            rightChildInView ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          {rightChild}
+        </div>
       </div>
     </section>
   );

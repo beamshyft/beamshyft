@@ -27,7 +27,7 @@ export const BeamshyftFooter = () => (
           to="tel:+18574887898"
           className="text-sm text-muted-foreground"
         >
-          +1(857)-488-7898
+          +1 (857) 488-7898
         </Link>
       </FooterColumn>
       <FooterColumn>
