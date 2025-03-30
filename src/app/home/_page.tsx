@@ -44,17 +44,17 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col">
       <section
-        className="w-full h-screen bg-primary-background relative flex flex-col items-center justify-center" /*style={{background: "linear-gradient(0deg, #171717, transparent 20%)"}}*/
+        className="w-full h-screen bg-black relative flex flex-col items-center justify-center" /*style={{background: "linear-gradient(0deg, #171717, transparent 20%)"}}*/
       >
-        <div className="flex flex-col items-center p-8 z-5 overflow-hidden w-full relative">
+        <div className="flex flex-col items-center p-8 z-[5] overflow-hidden w-full relative">
           <AlternatingText
-            className="text-4xl font-extralight tracking-tight lg:text-5xl mb-[-16px]"
+            className="text-4xl font-extralight tracking-tight lg:text-5xl mb-[-16px] text-white"
             texts={["Cabinets", "Vanities", "Doors"]}
           />
-          <h1 className="scroll-m-20 text-5xl font-bold tracking-tight lg:text-7xl text-center min-w-[365px]">
+          <h1 className="scroll-m-20 text-5xl font-bold tracking-tight lg:text-7xl text-center min-w-[365px] text-white">
             From our factory
             <br />
-            <span className="font-extralight">
+            <span className="font-extralight text-accent">
               to your site.
             </span>
           </h1>
@@ -67,16 +67,17 @@ const Home: React.FC = () => {
             </Button>
           </div>
         </div>
-        <div className="scroll-m-20 mt-200 text-secondary-background absolute bottom-8">
+        <div className="scroll-m-20 mt-200 text-secondary-background absolute bottom-8 z-[5]">
           <ChevronsDown
             size={50}
             onClick={() => {
               window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
             }}
+            color="white"
             className="cursor-pointer"
           />
         </div>
-        <div className="fixed top-0 left-0 w-full h-screen overflow-hidden z-[-1] bg-secondary opacity-50">
+        <div className="fixed top-0 left-0 w-full h-screen overflow-hidden z-[0] opacity-50">
           <video
             ref={videoRef}
             autoPlay

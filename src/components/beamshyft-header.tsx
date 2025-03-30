@@ -34,50 +34,11 @@ const QuoteButton = (props: React.JSX.IntrinsicAttributes & ButtonProps & React.
   );
 }
 
-function HamburgerMenu() {
-  const [open, setOpen] = React.useState(false);
-
-  return (
-    <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger asChild>
-        <div className="sm:hidden cursor-pointer">
-          <Menu className="h-8 w-8" />
-          <span className="sr-only">Toggle menu</span>
-        </div>
-      </SheetTrigger>
-      <SheetContent
-        side="right"
-        className="w-[240px] sm:w-[300px] flex flex-col gap-4"
-      >
-        <SheetTitle className="pt-10">
-          <Link
-            to="/"
-            className={navigationMenuTriggerStyle()}
-            onClick={() => setOpen(false)}
-          >
-            <BeamshyftLogo />
-          </Link>
-        </SheetTitle>
-        <nav className="flex flex-col space-y-4">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              to={item.path}
-              className={navigationMenuTriggerStyle()}
-              onClick={() => setOpen(false)}
-            >
-              {item.name}
-            </Link>
-          ))}
-          <QuoteButton />
-        </nav>
-      </SheetContent>
-    </Sheet>
-  );
-}
 
 export const BeamshyftHeader = () => {
   const [isTransparent, setIsTransparent] = useState(true);
+  const [open, setOpen] = React.useState(false);
+
   const pathname = usePathname();
   useEffect(() => {
     const handleScroll = () => {
@@ -99,7 +60,7 @@ export const BeamshyftHeader = () => {
         backgroundColor: isTransparent && pathname === "/" ? "transparent" : "hsl(var(--primary-foreground))",}}
     >
       <NavigationMenu>
-        <NavigationMenuList>
+        <NavigationMenuList className={isTransparent && pathname === "/" ? "invert" : ""}>
           <NavigationMenuItem>
             <Link to="/">
               <BeamshyftLogo width={200}/>
@@ -120,7 +81,41 @@ export const BeamshyftHeader = () => {
       </NavigationMenu>
       <div className="self-center">
         <QuoteButton className="hidden sm:block"/>
-        <HamburgerMenu />
+        <Sheet open={open} onOpenChange={setOpen}>
+          <SheetTrigger asChild>
+            <div className="sm:hidden cursor-pointer">
+              <Menu className="h-8 w-8" color={isTransparent && pathname === "/" ? "white" : "black"} />
+              <span className="sr-only">Toggle menu</span>
+            </div>
+          </SheetTrigger>
+          <SheetContent
+            side="right"
+            className="w-[240px] sm:w-[300px] flex flex-col gap-4"
+          >
+            <SheetTitle className="pt-10">
+              <Link
+                to="/"
+                className={navigationMenuTriggerStyle()}
+                onClick={() => setOpen(false)}
+              >
+                <BeamshyftLogo />
+              </Link>
+            </SheetTitle>
+            <nav className="flex flex-col space-y-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className={navigationMenuTriggerStyle()}
+                  onClick={() => setOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <QuoteButton />
+            </nav>
+          </SheetContent>
+        </Sheet>
       </div>
     </div>
   );
