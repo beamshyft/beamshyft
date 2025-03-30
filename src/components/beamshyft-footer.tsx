@@ -78,10 +78,10 @@ export const BeamshyftFooter = () => (
           Facebook
         </Link>
         <Link
-          to="https://twitter.com/beamshyft"
+          to="https://x.com/beamshyft"
           className="text-sm text-muted-foreground"
         >
-          Twitter
+          X
         </Link>
         <Link
           to="https://linkedin.com/company/beamshyft"
