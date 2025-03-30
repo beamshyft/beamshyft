@@ -92,7 +92,7 @@ const Home: React.FC = () => {
         </div>
       </section>
       <div className="bg-primary-foreground flex justify-center relative">
-        <div className="absolute right-0 top-0 w-[500px] h-full">
+        {/* <div className="absolute right-0 top-0 w-[500px] h-full">
           <div
             className="absolute right-0 top-0 w-full h-[1000px]"
             style={{
@@ -101,7 +101,7 @@ const Home: React.FC = () => {
                 "radial-gradient(circle at top right, hsl(var(--accent)) 0%, transparent 45%)",
             }}
           />
-        </div>
+        </div> */}
 
         <div className="bg-transparent max-w-[1200px] pt-20 relative">
           <div className="bg-transparent absolute left-0 pl-[14px] md:pl-[50px] h-full pb-20 pt-10 z-0">
@@ -127,7 +127,7 @@ const Home: React.FC = () => {
               </div>
             }
           />
-          <div className="p-4 flex flex-row gap-8 w-full justify-center mt-20 mb-[100px] text-center flex-wrap w-[500px]">
+          <div className="p-4 flex flex-row gap-8 w-full justify-center mb-[100px] text-center flex-wrap w-[500px]">
 
             <div className="flex flex-col gap-2 items-center min-w-[250px]">
               <Image
@@ -177,7 +177,7 @@ const Home: React.FC = () => {
           <InfoSection
             title="How it works"
             description="In 3 simple steps, you can have your custom cabinets, vanities, and doors delivered to your site."
-            titleClassName="text-3xl lg:text-4xl font-bold"
+            titleClassName="text-4xl lg:text-5xl font-bold"
             rightChild={
               <div className="h-[400px]  w-full relative rounded-2xl overflow-hidden">
                 <Image
@@ -200,7 +200,7 @@ const Home: React.FC = () => {
           <InfoSection
             height="400px"
             title={<div className="gap-2 items-center "><i className="inline-block align-bottom mr-2"><PencilRuler width={30} height={30} /></i>Design and measurements</div>}
-            description="Send us your floorplans and any special requests you have for your space. We work out designs between you and our manufacturers until you are 100% satisfied."
+            description="Let us bring your vision to life - at no cost. Our expert team offers professional kitchen and cabinet design services, including precise on-site measurements, to ensure a perfect fit for our high-quality cabinetry. We work fast, stay friendly, and tailor every detail to your unique needs - so you can focus on what matters most: making your business shine."
             number={1}
             leftChild={
               <Button asChild size={"sm"} variant="outline">
@@ -234,7 +234,7 @@ const Home: React.FC = () => {
             height="400px"
 
             title={<div className="flex flex-row gap-2 items-center"><Factory width={30} height={30} />Manufacture</div>}
-            description="We'll manufacture your items to your exact specifications. This should take no more than 2 weeks."
+            description="We’ll manufacture your items to your exact specifications - typically in no more than two weeks - so you get the perfect fit without the wait."
             number={2}
             rightChild={
               <div className="h-full w-full relative text-center">
@@ -253,7 +253,7 @@ const Home: React.FC = () => {
             height="400px"
 
             title={<div className="flex flex-row gap-2 items-center"><Truck width={30} height={30} />Deliver</div>}
-            description="We'll deliver your items directly to your site in the shortest time possible. You'll receive your items in a shipping container, ready to be installed."
+            description="We'll deliver your items directly to your site, faster than you expect. Choose between unassembled or factory-assembled products - both arrive ready for quick installation, so you can keep your business moving forward."
             number={3}
             rightChild={
               <div className="h-full w-full relative text-center">
