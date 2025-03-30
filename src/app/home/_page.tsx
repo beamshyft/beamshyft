@@ -158,7 +158,7 @@ const Home: React.FC = () => {
                 alt="delivery"
                 height={100}
                 width={100}
-                style={{filter: "hue-rotate(320deg)"}}
+                style={{filter: "hue-rotate(290deg)"}}
               />
               <p>Delivery in 72 hours</p>
             </div>

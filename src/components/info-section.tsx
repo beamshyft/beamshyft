@@ -53,7 +53,7 @@ const InfoSection = ({
         >
           {number && !reverse ? (
             <div className="rounded-full bg-accent2/90 flex items-center justify-center min-w-[40px] h-[40px]">
-              <p className="text-white text-2xl font-bold">{number}</p>
+              <p className="text-secondary-foreground text-2xl font-bold">{number}</p>
             </div>
           ) : (
             <div className="min-w-[40px]"></div>
@@ -75,7 +75,7 @@ const InfoSection = ({
           {rightChild}
           {number && reverse ? (
             <div className="rounded-full bg-accent2/90 flex items-center justify-center min-w-[40px] h-[40px]">
-              <p className="text-white text-2xl font-bold">{number}</p>
+              <p className="text-secondary-foreground text-2xl font-bold">{number}</p>
             </div>
           ) : (
             <div className="min-w-[40px]"></div>
@@ -89,7 +89,7 @@ const InfoSection = ({
         <div className="flex flex-col gap-4 z-10 text-center items-center">
           {number && (
             <div className="rounded-full bg-accent2/90 flex items-center justify-center min-w-[40px] w-[40px] h-[40px]">
-              <p className="text-white text-2xl font-bold">{number}</p>
+              <p className="text-secondary-foreground text-2xl font-bold">{number}</p>
             </div>
           )}
           <h2 className={titleClassName ? titleClassName : "text-3xl font-bold"}>{title}</h2>
