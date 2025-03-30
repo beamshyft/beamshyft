@@ -17,7 +17,7 @@ const InfoSection = ({
   titleClassName,
 }: InfoSectionProps) => {
   return (
-    <Card className="relative flex flex-col overflow-hidden max-w-[300px] info-card">
+    <Card className="relative flex flex-col overflow-hidden w-[300px] info-card">
       <div className="h-[300px] overflow-hidden">
         <Image src={imageSrc} alt={title} width={300} height={300} style={{height: "inherit"}}/>
       </div>

@@ -27,7 +27,8 @@ const Catalog: React.FC = () => {
       >
       </PageHeader>
       <div className="bg-primary-foreground flex flex-col items-center">
-        <div className="flex items-start flex-row justify-center gap-4 p-8 flex-wrap max-w-[1200px]">
+        <div className="flex items-start flex-row justify-center gap-4 flex-wrap max-w-[1200px]">
+          <div className="flex items-start flex-row justify-center gap-4 mb-10 flex-wrap pt-8">
           <InfoCard
             title="Cabinets"
             description="Check out our collection of cabinets."
@@ -67,6 +68,7 @@ const Catalog: React.FC = () => {
               </Button>
             }
           />
+          </div>
           {/* <div className="opacity-[30%]">
             <InfoCard
               title="Decking, flooring, and more."
@@ -75,6 +77,7 @@ const Catalog: React.FC = () => {
             />
           </div> */}
           {/* lead time section */}
+
           <InfoSection
             title="Lead Time"
             titleClassName="text-5xl font-bold"

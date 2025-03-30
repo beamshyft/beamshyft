@@ -6,9 +6,9 @@ const BeamshyftLogo: React.FC<React.ImgHTMLAttributes<HTMLImageElement>> = (prop
         src="/beamshyft_white.PNG"
         alt="Beamshyft Logo"
         width={props.width || 164}
-        className="invert dark:invert-0 block"
+        className="invert block"
         {...props}
-      />);
+    />);
     };
 BeamshyftLogo.propTypes = {
     width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),

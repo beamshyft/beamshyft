@@ -65,7 +65,7 @@ const InfoSection = ({
               {title}
             </h2>
             <p style={{textAlign: reverse ? "end" : "start"}}>{description}</p>
-            <div>{leftChild}</div>
+            {leftChild}
           </div>
         </div>
         <div
@@ -94,7 +94,7 @@ const InfoSection = ({
           )}
           <h2 className={titleClassName ? titleClassName : "text-3xl font-bold"}>{title}</h2>
           <p className="self-start">{description}</p>
-          {leftChild && <div>{leftChild}</div>}
+          {leftChild && leftChild}
         </div>
         <div>{rightChild}</div>
       </div>

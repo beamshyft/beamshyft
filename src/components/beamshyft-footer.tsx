@@ -6,7 +6,6 @@ import {
   FooterContent,
 } from "@/components/ui/footer";
 import BeamshyftLogo from "@/components/logos/beamshyft";
-import { ModeToggle } from "@/components/ui/mode-toggle";
 import { Link } from "react-router-dom";
 export const BeamshyftFooter = () => (
   <Footer className="w-full px-4 py-8 pt-[6rem] bg-primary-foreground z-[5]">
@@ -98,7 +97,6 @@ export const BeamshyftFooter = () => (
         {/* <Link to="/">Privacy Policy</Link>
         <Link to="/">Terms of Service</Link> */}
         <a href="https://lordicon.com/">Icons by Lordicon.com</a>
-        <ModeToggle />
       </div>
     </FooterBottom>
   </Footer>);

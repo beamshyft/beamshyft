@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import InfoSection from "@/components/info-section";
-import PageHeader from "@/components/page-header";
 
 const About: React.FC = () => {
   useEffect(() => {
@@ -10,66 +9,68 @@ const About: React.FC = () => {
 
   return (
     <div className="flex flex-col bg-primary-foreground mt-[70px]">
-      <PageHeader
-        title="About us"
-        description="Built by experienced real-estate developers, for real-estate developers. Based in Boston MA."
-        imageSrc="/boston_skyline.jpg"
-      />
       <div className="bg-primary-foreground flex flex-col items-center pt-20">
         <div className="flex items-start flex-row justify-center gap-4 flex-wrap max-w-[1200px]">
           <InfoSection
-            title="Our Mission"
+            title="Lower your construction costs"
             titleClassName="text-5xl font-bold"
             description={
               <span>
-                We aim to deliver quality interiors at a fraction of the cost.
+                Eliminate multiple middlemen and supply high-quality materials for the best prices available, guaranteed.
               </span>
             }
             rightChild={
               <div className="h-[400px]  w-full relative rounded-2xl overflow-hidden">
                 <Image
-                  src="/Imágenes Alta Catálogo ID/Vestidor-2.jpg"
+                  src="/iStock-warm-kitchen-beamshyft-website.jpg"
                   objectFit="cover"
                   layout="fill"
                   alt="American Warehouse Cabinets"
                 />
               </div>
             }
-          />
+            leftChild={
+              <div className="h-full w-full relative text-center sm:text-left">
+                <Image
+                  src="/animations/piggy-bank.gif"
+                  objectFit="cover"
+                  alt="home"
+                  height={200}
+                  width={200}
 
+                  className="inline-block"
+                />
+              </div>
+            }
+          />
           <InfoSection
-            title="Our Vision"
             reverse
-            description="We envision a world where real-estate developers can focus on their projects, and not the logistics of sourcing materials."
+            title="How we do it"
+            description="Traditional suppliers pass your project through many hands, each adding a markup that eats away at your bottom line. We simplify the process by manufacturing our products in-house and delivering them straight to your site, ensuring you can provide the quality your clients deserve—without the extra noise."
             rightChild={
               <div className="h-[400px]  w-full relative rounded-2xl overflow-hidden">
                 <Image
-                  src="/Imágenes Alta Catálogo ID/Baño.jpg"
+                  src="/Imágenes Alta Catálogo ID/Nazca-Dinámica-DelanteyAtrás.jpg"
                   objectFit="cover"
                   layout="fill"
                   alt="American Warehouse Cabinets"
                 />
               </div>
             }
-          />
-          <InfoSection
-            title="Our Values"
-            description="We value quality, transparency, accessibility in all that we do. We believe developers should have access to the best materials at the best prices, no matter their experience."
-            rightChild={
-              <div className="h-[400px]  w-full relative rounded-2xl overflow-hidden">
+            leftChild={
+              <div className="h-full w-full relative text-center sm:text-right">
                 <Image
-                  src="/Imágenes Alta Catálogo ID/Baño.jpg"
+                  src="/animations/worker.gif"
                   objectFit="cover"
-                  layout="fill"
-                  alt="American Warehouse Cabinets"
+                  alt="home"
+                  height={200}
+                  width={200}
+
+                  className="inline-block"
                 />
               </div>
             }
           />
-            <InfoSection
-              title="Our Team"
-              description="Meet the team behind Beamshyft."
-            />
         </div>
       </div>
     </div>

@@ -12,6 +12,30 @@ import AlternatingText from "../../components/alternating-text";
 
 import Image from "next/image";
 
+const FeatureCard = ({
+  caption,
+  imageSrc,
+  imageStyle,
+}: {
+  caption: string;
+  imageSrc: string;
+  imageStyle?: React.CSSProperties;
+}) => {
+  return (
+    <div className="flex flex-col gap-2 items-center w-[130px] sm:min-w-[170px]">
+      <Image
+        src={imageSrc}
+        objectFit="cover"
+        alt="feature"
+        height={100}
+        width={100}
+        style={imageStyle}
+      />
+      <p className="max-w-[110px] text-sm sm:max-w-[170px]">{caption}</p>
+    </div>
+  );
+}
+
 const Home: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
@@ -116,64 +140,75 @@ const Home: React.FC = () => {
 
               <div className="h-full w-full relative text-center">
                 <Image
-                  src="/animations/home2.gif"
+                  src="/animations/home3.gif"
                   objectFit="cover"
                   alt="home"
                   height={250}
                   width={250}
 
-                  className="inline-block gif-outline"
+                  className="inline-block"
                 />
               </div>
             }
           />
-          <div className="p-4 flex flex-row gap-8 w-full justify-center mb-[100px] text-center flex-wrap w-[500px]">
-
-            <div className="flex flex-col gap-2 items-center min-w-[250px]">
-              <Image
-                src="/animations/price-match.gif"
-                objectFit="cover"
-                alt="price-match"
-                height={100}
-                width={100}
-                style={{filter: "hue-rotate(120deg)"}}
+          <div className="p-4 flex flex-row gap-2 justify-around sm:justify-center mb-[100px] text-center flex-wrap z-[5]">
+            {[
+              { caption: "Carb2 compliant", imageSrc: "/animations/leaf.gif" },
+              { caption: "Price match +20% off extra guaranteed", imageSrc: "/animations/price-match.gif" },
+              { caption: "72 hour delivery on stock items", imageSrc: "/animations/delivery.gif" },
+              { caption: "30 day money back guarantee", imageSrc: "/animations/refund.gif" },
+              { caption: "2 year warranty on all products", imageSrc: "/animations/warranty.gif" },
+              { caption: "No minimum order quantity, whether it’s 1 door or 1000", imageSrc: "/animations/warehouse.gif" },
+              { caption: "No particle board", imageSrc: "/animations/no-particle.gif" },
+              { caption: "100% reforested", imageSrc: "/animations/reforest.gif" },
+            ].map((feature, index) => (
+              <FeatureCard
+                key={index}
+                caption={feature.caption}
+                imageSrc={feature.imageSrc}
+                imageStyle={{ filter: `hue-rotate(${(300 / 8) * index}deg)` }}
               />
-              <p>Price match guarantee</p>
-            </div>
-            <div className="flex flex-col flex-wrap gap-2 items-center min-w-[250px]">
-              <Image
-                src="/animations/warehouse.gif"
-                objectFit="cover"
-                alt="warehouse"
-                height={100}
-                width={100}
-                style={{filter: "hue-rotate(200deg)"}}
-              />
-              <p>All cabinets in stock</p>
-            </div>
-            <div className="flex flex-col gap-2 items-center min-w-[250px]">
-              <Image
-                src="/animations/delivery.gif"
-                objectFit="cover"
-                alt="delivery"
-                height={100}
-                width={100}
-                style={{filter: "hue-rotate(290deg)"}}
-              />
-              <p>Delivery in 72 hours</p>
-            </div>
-            <div className="flex flex-col gap-2 items-center min-w-[250px]">
-              <Image
-                src="/animations/leaf.gif"
-                objectFit="cover"
-                alt="leaf"
-                height={100}
-                width={100}
-                
-              />
-              <p>Carb2 compliant</p>
-            </div>
+            ))}
           </div>
+          <InfoSection
+            reverse
+            title="Unbeatable prices"
+            description="We guarantee the best prices on the market. If you find a better price, we'll match it."
+            titleClassName="text-4xl lg:text-5xl font-bold"
+            rightChild={
+              <div className="h-full w-full relative flex flex-col items-center justify-center font-semibold gap-8 bg-white p-8 rounded-lg shadow-lg border-4 border-dashed border-red-500">
+                <div className="text-center">
+                  <p className="text-lg md:text-xl lg:text-2xl text-black">
+                    Small kitchen for
+                    <span className="text-red-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $3000 </span>
+                    instead of&nbsp;
+                    <span className="line-through text-gray-500 text-lg md:text-xl lg:text-2xl">$10,000</span>
+                  </p>
+                </div>
+                <div className="text-center">
+                  <p className="text-lg md:text-xl lg:text-2xl text-black">
+                    Medium kitchen for
+                    <span className="text-red-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $5000 </span>
+                    instead of&nbsp;
+                    <span className="line-through text-gray-500 text-lg md:text-xl lg:text-2xl">$20,000</span>
+                  </p>
+                </div>
+                <div className="text-center">
+                  <p className="text-lg md:text-xl lg:text-2xl text-black">
+                    Large kitchen for
+                    <span className="text-red-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $8,500 </span>
+                    instead of&nbsp;
+                    <span className="line-through text-gray-500 text-lg md:text-xl lg:text-2xl">$40,000</span>
+                  </p>
+                </div>
+              </div>
+            }
+            leftChild={
+              <Button asChild size={"sm"} variant="outline">
+                <Link to="/catalog">Browse our Catalog</Link>
+              </Button>
+            }
+          />
           <InfoSection
             title="How it works"
             description="In 3 simple steps, you can have your custom cabinets, vanities, and doors delivered to your site."
