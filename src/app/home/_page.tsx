@@ -199,7 +199,7 @@ const Home: React.FC = () => {
           />
           <InfoSection
             height="400px"
-            title={<div className="flex flex-row gap-2 items-center"><PencilRuler width={30} height={30} />Design</div>}
+            title={<div className="gap-2 items-center "><i className="inline-block align-bottom mr-2"><PencilRuler width={30} height={30} /></i>Design and measurements</div>}
             description="Send us your floorplans and any special requests you have for your space. We work out designs between you and our manufacturers until you are 100% satisfied."
             number={1}
             leftChild={
@@ -274,10 +274,7 @@ const Home: React.FC = () => {
             height="auto"
             description="Get started on your next project with Beamshyft. We're here to help you every step of the way."
             rightChild={
-              <div className="flex flex-row gap-4 justify-center">
-                <Button asChild size={"lg"} variant="outline">
-                  <Link to="/contact">Contact Sales</Link>
-                </Button>
+              <div className="flex flex-row gap-4 justify-center flex-wrap">
                 <Button asChild size={"lg"} variant="default">
                   <Link to="/contact">Get a Quote<Upload /></Link>
                 </Button>

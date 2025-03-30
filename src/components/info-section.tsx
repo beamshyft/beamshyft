@@ -86,7 +86,7 @@ const InfoSection = ({
   ) : (
     <section className={`w-full bg-transparent min-h-[500px] relative`} style={height ? {minHeight: height} : {}}>
       <div className="flex flex-col gap-16 p-8">
-        <div className="flex flex-col gap-4 z-10 text-center">
+        <div className="flex flex-col gap-4 z-10 text-center items-center">
           {number && (
             <div className="rounded-full bg-accent2/90 flex items-center justify-center min-w-[40px] w-[40px] h-[40px]">
               <p className="text-white text-2xl font-bold">{number}</p>
