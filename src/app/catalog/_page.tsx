@@ -34,7 +34,7 @@ const Catalog: React.FC = () => {
             imageSrc="/Imágenes Alta Catálogo ID/Vestidor-2.jpg"
             bottomChild={
               <Button
-                onClick={() => download("/catalogs/cabinets_and_vanities.pdf")}
+                onClick={() => download("/catalogs/beamshyft_cabinets.pdf")}
                 variant="outline"
               >
                 Browse Cabinets
@@ -47,7 +47,7 @@ const Catalog: React.FC = () => {
             imageSrc="/Imágenes Alta Catálogo ID/Baño.jpg"
             bottomChild={
               <Button
-                onClick={() => download("/catalogs/cabinets_and_vanities.pdf")}
+                onClick={() => download("/catalogs/beamshyft_vanities.pdf")}
                 variant="outline"
               >
                 Browse Vanities
