@@ -136,7 +136,7 @@ const Home: React.FC = () => {
                 alt="price-match"
                 height={100}
                 width={100}
-                className="gif-outline"
+                style={{filter: "hue-rotate(120deg)"}}
               />
               <p>Price match guarantee</p>
             </div>
@@ -147,7 +147,7 @@ const Home: React.FC = () => {
                 alt="warehouse"
                 height={100}
                 width={100}
-                className="gif-outline"
+                style={{filter: "hue-rotate(200deg)"}}
               />
               <p>All cabinets in stock</p>
             </div>
@@ -158,9 +158,20 @@ const Home: React.FC = () => {
                 alt="delivery"
                 height={100}
                 width={100}
-                className="gif-outline"
+                style={{filter: "hue-rotate(320deg)"}}
               />
               <p>Delivery in 72 hours</p>
+            </div>
+            <div className="flex flex-col gap-2 items-center min-w-[250px]">
+              <Image
+                src="/animations/leaf.gif"
+                objectFit="cover"
+                alt="leaf"
+                height={100}
+                width={100}
+                
+              />
+              <p>Carb2 compliant</p>
             </div>
           </div>
           <InfoSection
