@@ -94,9 +94,6 @@ export const BeamshyftFooter = () => (
     <FooterBottom>
       <div>© 2025 Beamshyft. All rights reserved</div>
       <div className="flex items-center gap-4">
-        {/* <Link to="/">Privacy Policy</Link>
-        <Link to="/">Terms of Service</Link> */}
-        <a href="https://lordicon.com/">Icons by Lordicon.com</a>
       </div>
     </FooterBottom>
   </Footer>);

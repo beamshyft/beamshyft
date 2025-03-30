@@ -213,29 +213,29 @@ const Home: React.FC = () => {
             rightChild={
 
 
-              <div className="flex flex-col  gap-8 bg-white p-8 rounded-lg shadow-lg border-4 border-dashed border-red-500">
+              <div className="flex flex-col  gap-8 bg-white p-8 rounded-lg shadow-lg border-4 border-dashed border-grey-500">
                 <PriceCard>
                     <p className="text-lg md:text-xl lg:text-2xl text-black">
                     - Small kitchen for
-                      <span className="text-red-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $3000 </span>
+                      <span className="text-green-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $3000 </span>
                       instead of&nbsp;
-                      <span className="line-through text-gray-500 text-lg md:text-xl lg:text-2xl">$10,000</span>
+                      <span className="line-through text-red-500 text-lg md:text-xl lg:text-2xl">$10,000</span>
                     </p>
                 </PriceCard>
                 <PriceCard>
                     <p className="text-lg md:text-xl lg:text-2xl text-black">
                     - Medium kitchen for
-                      <span className="text-red-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $5000 </span>
+                      <span className="text-green-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $5000 </span>
                       instead of&nbsp;
-                      <span className="line-through text-gray-500 text-lg md:text-xl lg:text-2xl">$20,000</span>
+                      <span className="line-through text-red-500 text-lg md:text-xl lg:text-2xl">$20,000</span>
                     </p>
                 </PriceCard>
                 <PriceCard>
                     <p className="text-lg md:text-xl lg:text-2xl text-black">
                     - Large kitchen for
-                      <span className="text-red-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $8,500 </span>
+                      <span className="text-green-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $8,500 </span>
                       instead of&nbsp;
-                      <span className="line-through text-gray-500 text-lg md:text-xl lg:text-2xl">$40,000</span>
+                      <span className="line-through text-red-500 text-lg md:text-xl lg:text-2xl">$40,000</span>
                     </p>
                 </PriceCard>
               </div>
@@ -363,25 +363,29 @@ const Home: React.FC = () => {
 
               <div className="flex gap-4 justify-center">
                 <Button asChild size="lg" variant="ghost">
-                  <a href="https://twitter.com/beamshyft" aria-label="Twitter">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.5 2a4.48 4.48 0 00-4.48 4.48c0 .35.04.7.11 1.03A12.94 12.94 0 013 4.1a4.48 4.48 0 001.39 5.98A4.48 4.48 0 012 9.7v.06a4.48 4.48 0 003.6 4.4 4.48 4.48 0 01-2 .08 4.48 4.48 0 004.18 3.1A9 9 0 012 19.54a12.94 12.94 0 007 2.05c8.4 0 13-7 13-13v-.59A9.18 9.18 0 0023 3z" />
-                    </svg>
-                  </a>
+                    <a href="https://x.com/beamshyft" aria-label="X">
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Layer_1" width="24px" height="24px" viewBox="0 0 24 24"><path d="M14.095479,10.316482L22.286354,1h-1.940718l-7.115352,8.087682L7.551414,1H1l8.589488,12.231093L1,23h1.940717  l7.509372-8.542861L16.448587,23H23L14.095479,10.316482z M11.436522,13.338465l-0.871624-1.218704l-6.924311-9.68815h2.981339  l5.58978,7.82155l0.867949,1.218704l7.26506,10.166271h-2.981339L11.436522,13.338465z"/></svg>
+                    </a>
                 </Button>
                 <Button asChild size="lg" variant="ghost">
                   <a href="https://facebook.com/beamshyft" aria-label="Facebook">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M18 2h-3a6 6 0 00-6 6v3H6v4h3v8h4v-8h3l1-4h-4V8a2 2 0 012-2h3z" />
-                    </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18 2h-3a6 6 0 00-6 6v3H6v4h3v8h4v-8h3l1-4h-4V8a2 2 0 012-2h3z" />
+                  </svg>
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="ghost">
                   <a href="https://linkedin.com/company/beamshyft" aria-label="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 110 4 2 2 0 010-4z" />
-                    </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 110 4 2 2 0 010-4z" />
+                  </svg>
                   </a>
+                </Button>
+                <Button asChild size="lg" variant="ghost">
+                  <a href="https://instagram.com/beamshyft" aria-label="Instagram">
+                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 26 26">
+<path d="M 7.546875 0 C 3.390625 0 0 3.390625 0 7.546875 L 0 18.453125 C 0 22.609375 3.390625 26 7.546875 26 L 18.453125 26 C 22.609375 26 26 22.609375 26 18.453125 L 26 7.546875 C 26 3.390625 22.609375 0 18.453125 0 Z M 7.546875 2 L 18.453125 2 C 21.527344 2 24 4.46875 24 7.546875 L 24 18.453125 C 24 21.527344 21.53125 24 18.453125 24 L 7.546875 24 C 4.472656 24 2 21.53125 2 18.453125 L 2 7.546875 C 2 4.472656 4.46875 2 7.546875 2 Z M 20.5 4 C 19.671875 4 19 4.671875 19 5.5 C 19 6.328125 19.671875 7 20.5 7 C 21.328125 7 22 6.328125 22 5.5 C 22 4.671875 21.328125 4 20.5 4 Z M 13 6 C 9.144531 6 6 9.144531 6 13 C 6 16.855469 9.144531 20 13 20 C 16.855469 20 20 16.855469 20 13 C 20 9.144531 16.855469 6 13 6 Z M 13 8 C 15.773438 8 18 10.226563 18 13 C 18 15.773438 15.773438 18 13 18 C 10.226563 18 8 15.773438 8 13 C 8 10.226563 10.226563 8 13 8 Z"></path>
+</svg></a>
                 </Button>
               </div>
             }>

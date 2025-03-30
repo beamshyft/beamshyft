@@ -6,7 +6,7 @@ const BeamshyftLogo: React.FC<React.ImgHTMLAttributes<HTMLImageElement>> = (prop
         src="/beamshyft_white.PNG"
         alt="Beamshyft Logo"
         width={props.width || 164}
-        className="invert block"
+        className="invert block pt-1"
         {...props}
     />);
     };

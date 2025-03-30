@@ -63,7 +63,7 @@ export const BeamshyftHeader = () => {
         <NavigationMenuList className={isTransparent && pathname === "/" ? "invert" : ""}>
           <NavigationMenuItem>
             <Link to="/">
-              <BeamshyftLogo width={200}/>
+              <BeamshyftLogo width={180} style={{paddingRight: "18px"}}/>
             </Link>
           </NavigationMenuItem>
           {navItems.map((item, index) => (
