@@ -59,10 +59,10 @@ const Home: React.FC = () => {
             </span>
           </h1>
           <div className="scroll-m-20 mt-12 flex flex-col sm:flex-row sm:items-center gap-2">
-            <Button asChild variant="outline" size={"lg"}>
+            <Button asChild variant="outline" size={"lg"} className="w-[190px]">
               <Link to="/catalog">Browse our catalog</Link>
             </Button>
-            <Button asChild size={"lg"}>
+            <Button asChild size={"lg"} className="w-[190px]">
               <Link to="/contact">Contact sales</Link>
             </Button>
           </div>

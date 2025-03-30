@@ -52,7 +52,7 @@ const InfoSection = ({
           }}
         >
           {number && !reverse ? (
-            <div className="rounded-full bg-accent/90 flex items-center justify-center min-w-[40px] h-[40px]">
+            <div className="rounded-full bg-accent2/90 flex items-center justify-center min-w-[40px] h-[40px]">
               <p className="text-white text-2xl font-bold">{number}</p>
             </div>
           ) : (
@@ -74,7 +74,7 @@ const InfoSection = ({
         >
           {rightChild}
           {number && reverse ? (
-            <div className="rounded-full bg-accent/90 flex items-center justify-center min-w-[40px] h-[40px]">
+            <div className="rounded-full bg-accent2/90 flex items-center justify-center min-w-[40px] h-[40px]">
               <p className="text-white text-2xl font-bold">{number}</p>
             </div>
           ) : (
@@ -88,7 +88,7 @@ const InfoSection = ({
       <div className="flex flex-col gap-16 p-8">
         <div className="flex flex-col gap-4 z-10 text-center">
           {number && (
-            <div className="rounded-full bg-accent/90 flex items-center justify-center min-w-[40px] w-[40px] h-[40px]">
+            <div className="rounded-full bg-accent2/90 flex items-center justify-center min-w-[40px] w-[40px] h-[40px]">
               <p className="text-white text-2xl font-bold">{number}</p>
             </div>
           )}

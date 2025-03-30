@@ -9,7 +9,7 @@ import BeamshyftLogo from "@/components/logos/beamshyft";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import { Link } from "react-router-dom";
 export const BeamshyftFooter = () => (
-  <Footer className="w-full px-4 py-8 pt-[6rem] bg-primary-foreground">
+  <Footer className="w-full px-4 py-8 pt-[6rem] bg-primary-foreground z-[5]">
     <FooterContent>
       <FooterColumn className="col-span-2 sm:col-span-3 md:col-span-1">
         <div className="flex items-center gap-2">
