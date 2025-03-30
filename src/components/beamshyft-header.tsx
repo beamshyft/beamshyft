@@ -26,7 +26,7 @@ const navItems = [
 
 const QuoteButton = (props: React.JSX.IntrinsicAttributes & ButtonProps & React.RefAttributes<HTMLButtonElement>) => {
   return (
-    <Button {...props} variant="outline" size="default" >
+    <Button {...props} variant="outline" size="default" asChild>
       <Link to="/contact" className="text-secondary-foreground font-bold">
         Get a Quote
       </Link>
