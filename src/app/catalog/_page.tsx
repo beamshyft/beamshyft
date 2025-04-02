@@ -61,7 +61,7 @@ const Catalog: React.FC = () => {
             imageSrc="/Imágenes Alta Catálogo ID/Magic.jpg"
             bottomChild={
               <Button
-                onClick={() => download("/catalogs/doors.pdf")}
+                onClick={() => download("/catalogs/beamshyft_doors.pdf")}
                 variant="outline"
               >
                 Browse Doors
