@@ -83,7 +83,7 @@ const Catalog: React.FC = () => {
             titleClassName="text-5xl font-bold"
             description={
               <span>
-                Uncustomized cabinets and vanities ship within 72 hours. Doors, customized cabinets, and vanities may require additional production time to meet your exact specifications.
+                Stock cabinets and vanities ship within 72 hours. Doors, customized cabinets, and vanities may require additional production time to meet your exact specifications.
               </span>
             }
             rightChild={

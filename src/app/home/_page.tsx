@@ -325,7 +325,7 @@ const Home: React.FC = () => {
             height="400px"
 
             title={<div className="flex flex-row gap-2 items-center"><Truck width={30} height={30} />Deliver</div>}
-            description="We'll deliver your items directly to your site, faster than you expect. Choose between unassembled or factory-assembled products - both arrive ready for quick installation, so you can keep your business moving forward."
+            description="We'll deliver your items directly to your site in the shortest time possible. Products can be unassembled or factory assembled, ready to be installed."
             number={3}
             rightChild={
               <div className="h-full w-full relative text-center">
