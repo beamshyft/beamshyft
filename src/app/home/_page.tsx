@@ -254,7 +254,7 @@ const Home: React.FC = () => {
                 <div className="h-[400px] w-full relative overflow-hidden shadow-lg">
                 <Image
                   id="design"
-                  src="/white_shaker_kitchen_cropped_from_cabinet_3.png"
+                  src="/white_shaker_kitchen_cropped_from_cabinet_3.jpg"
                   objectFit="cover"
                   layout="fill"
                   alt="American Warehouse Cabinets"

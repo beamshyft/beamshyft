@@ -32,7 +32,7 @@ const Catalog: React.FC = () => {
           <InfoCard
             title="Cabinets"
             description="Check out our collection of cabinets."
-            imageSrc="/Imágenes Alta Catálogo ID/Vestidor-2.jpg"
+            imageSrc="/graphite_shaker_kitchen_cropped_from_cabinet_4.jpg"
             bottomChild={
               <Button
                 onClick={() => download("/catalogs/beamshyft_cabinets.pdf")}
@@ -45,7 +45,7 @@ const Catalog: React.FC = () => {
           <InfoCard
             title="Vanities"
             description="View our variety of bathroom vanities."
-            imageSrc="/Imágenes Alta Catálogo ID/Baño.jpg"
+            imageSrc="/white_vanity_cropped_from_vanity_2.jpg"
             bottomChild={
               <Button
                 onClick={() => download("/catalogs/beamshyft_vanities.pdf")}
@@ -58,7 +58,7 @@ const Catalog: React.FC = () => {
           <InfoCard
             title="Doors"
             description="Design with our diverse selection of doors."
-            imageSrc="/Imágenes Alta Catálogo ID/Magic.jpg"
+	    imageSrc="/white door.webp"
             bottomChild={
               <Button
                 onClick={() => download("/catalogs/beamshyft_doors.pdf")}
