@@ -192,7 +192,7 @@ const Home: React.FC = () => {
               { caption: "72 hour delivery on stock items", imageSrc: "/animations/delivery.gif" },
               { caption: "30 day money back guarantee", imageSrc: "/animations/refund.gif" },
               { caption: "2 year warranty on all products", imageSrc: "/animations/warranty.gif" },
-              { caption: "No minimum order quantity, whether it’s 1 door or 1000", imageSrc: "/animations/warehouse.gif" },
+              { caption: "No minimum order quantity", imageSrc: "/animations/warehouse.gif" },
               { caption: "No particle board", imageSrc: "/animations/no-particle.gif" },
               { caption: "100% reforested", imageSrc: "/animations/reforest.gif" },
             ].map((feature, index) => (
