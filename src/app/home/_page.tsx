@@ -272,7 +272,7 @@ const Home: React.FC = () => {
           <InfoSection
             height="400px"
             title={<div className="gap-2 items-center "><i className="inline-block align-bottom mr-2"><PencilRuler width={30} height={30} /></i>Design and measurements</div>}
-            description="We provide onsite measurements and design services—fast, free of charge, and tailored just for you."
+            description="We provide onsite measurements and design services - fast, free of charge, and tailored just for you."
             number={1}
             leftChild={
               <Button asChild size={"sm"} variant="outline">
