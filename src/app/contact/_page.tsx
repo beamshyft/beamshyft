@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import PageHeader from "@/components/page-header";
 import { Button } from "@/components/ui/button";
 import InfoSection from "@/components/info-section";
+import CalendlyEmbed from "@/components/calendly-embed";
 
 const Contact: React.FC = () => {
     useEffect(() => {
@@ -44,10 +45,8 @@ const Contact: React.FC = () => {
                         // height="600px"
                         titleClassName="text-4xl font-bold text-center"
                         rightChild={
-                            <div className="h-fit-content w-full min-w-[320px] min-h-[700px]">
-                                <div className="calendly-inline-widget" data-url="https://calendly.com/joel-beamshyft?primary_color=d0ac81" style={{minWidth:320,height:900}}></div>
-                                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                            </div>
+                            <CalendlyEmbed
+                                    url="https://calendly.com/joel-beamshyft?primary_color=d0ac81"/>
                         }
                         />
                 </div>
