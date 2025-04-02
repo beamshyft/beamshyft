@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
                 imageSrc="/Imágenes Alta Catálogo ID/Filo-Muro-Evolución-2.jpg"
             >
                 <div className="flex flex-col gap-4 mt-8">
-                    
+
                 <Button asChild size="lg" variant="default">
                 <a
                     href="tel:+18574887898"
@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
                     start@beamshyft.com
                 </a>
                 </Button>
-                
+
                 </div>
             </PageHeader>
             <div className="bg-primary-foreground flex justify-center relative">
