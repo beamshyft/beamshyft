@@ -102,7 +102,7 @@ const Home: React.FC = () => {
             className="text-4xl font-extralight tracking-tight lg:text-5xl mb-[-16px] text-white"
             texts={["Cabinets", "Vanities", "Doors"]}
           />
-          <h1 className="scroll-m-20 text-5xl font-bold tracking-tight lg:text-7xl text-center min-w-[365px] text-white">
+          <h1 className="scroll-m-20 text-5xl font-bold tracking-tight lg:text-7xl text-center min-w-[320px] text-white">
             From our factory
             <br />
             <span className="font-extralight text-accent">
@@ -161,7 +161,7 @@ const Home: React.FC = () => {
           />
         </div> */}
 
-        <div className="bg-transparent max-w-[1200px] pt-20 relative">
+        <div className="bg-transparent max-w-[1200px] pt-20 relative overflow-hidden">
           <div className="bg-transparent absolute left-0 pl-[14px] md:pl-[50px] h-full pb-20 pt-10 z-0">
             <div className="border-l-2 border-primary-background h-full border-[#bbb]"></div>
           </div>
@@ -213,10 +213,10 @@ const Home: React.FC = () => {
             rightChild={
 
 
-              <div className="flex flex-col  gap-8 bg-white p-8 rounded-lg shadow-lg border-4 border-dashed border-grey-500">
+              <div className="flex flex-col  gap-8 bg-white p-8 rounded-lg shadow-lg border-4 border-dashed border-grey-500 text-center">
                 <PriceCard>
                     <p className="text-lg md:text-xl lg:text-2xl text-black">
-                    - Small kitchen for
+                    Small kitchen for
                       <span className="text-green-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $3000 </span>
                       instead of&nbsp;
                       <span className="line-through text-red-500 text-lg md:text-xl lg:text-2xl">$10,000</span>
@@ -224,7 +224,7 @@ const Home: React.FC = () => {
                 </PriceCard>
                 <PriceCard>
                     <p className="text-lg md:text-xl lg:text-2xl text-black">
-                    - Medium kitchen for
+                    Medium kitchen for
                       <span className="text-green-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $5000 </span>
                       instead of&nbsp;
                       <span className="line-through text-red-500 text-lg md:text-xl lg:text-2xl">$20,000</span>
@@ -232,7 +232,7 @@ const Home: React.FC = () => {
                 </PriceCard>
                 <PriceCard>
                     <p className="text-lg md:text-xl lg:text-2xl text-black">
-                    - Large kitchen for
+                    Large kitchen for
                       <span className="text-green-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $8,500 </span>
                       instead of&nbsp;
                       <span className="line-through text-red-500 text-lg md:text-xl lg:text-2xl">$40,000</span>
@@ -361,7 +361,7 @@ const Home: React.FC = () => {
             description="Stay connected through our social media channels"
             rightChild={
 
-              <div className="flex gap-4 justify-center">
+              <div className="flex gap-x-4 gap-y-8 justify-center flex-wrap">
                 <Button asChild size="lg" variant="ghost">
                     <a href="https://x.com/beamshyft" aria-label="X">
                   <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Layer_1" width="24px" height="24px" viewBox="0 0 24 24"><path d="M14.095479,10.316482L22.286354,1h-1.940718l-7.115352,8.087682L7.551414,1H1l8.589488,12.231093L1,23h1.940717  l7.509372-8.542861L16.448587,23H23L14.095479,10.316482z M11.436522,13.338465l-0.871624-1.218704l-6.924311-9.68815h2.981339  l5.58978,7.82155l0.867949,1.218704l7.26506,10.166271h-2.981339L11.436522,13.338465z"/></svg>

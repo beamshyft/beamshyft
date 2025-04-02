@@ -130,7 +130,7 @@ const InfoSection = ({
           >
             {title}
           </h2>
-          <p className="self-start">{description}</p>
+          <p>{description}</p>
           {leftChild && leftChild}
         </div>
         <div
