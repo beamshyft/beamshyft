@@ -216,7 +216,7 @@ const Home: React.FC = () => {
               <div className="flex flex-col  gap-8 bg-white p-8 rounded-lg shadow-lg border-4 border-dashed border-grey-500 text-center">
                 <PriceCard>
                     <p className="text-lg md:text-xl lg:text-2xl text-black">
-                    Small kitchen for
+                    Small solid wood kitchen for
                       <span className="text-green-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $3000 </span>
                       instead of&nbsp;
                       <span className="line-through text-red-500 text-lg md:text-xl lg:text-2xl">$10,000</span>
@@ -224,7 +224,7 @@ const Home: React.FC = () => {
                 </PriceCard>
                 <PriceCard>
                     <p className="text-lg md:text-xl lg:text-2xl text-black">
-                    Medium kitchen for
+                    Medium solid wood kitchen for
                       <span className="text-green-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $5000 </span>
                       instead of&nbsp;
                       <span className="line-through text-red-500 text-lg md:text-xl lg:text-2xl">$20,000</span>
@@ -232,7 +232,7 @@ const Home: React.FC = () => {
                 </PriceCard>
                 <PriceCard>
                     <p className="text-lg md:text-xl lg:text-2xl text-black">
-                    Large kitchen for
+                    Large solid wood kitchen for
                       <span className="text-green-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $8,500 </span>
                       instead of&nbsp;
                       <span className="line-through text-red-500 text-lg md:text-xl lg:text-2xl">$40,000</span>
@@ -254,7 +254,7 @@ const Home: React.FC = () => {
               <div className="h-[400px]  w-full relative rounded-2xl overflow-hidden">
                 <Image
                   id="design"
-                  src="/Imágenes Alta Catálogo ID/Baño.jpg"
+                  src="/white_shaker_kitchen_cropped_from_cabinet_3.png"
                   objectFit="cover"
                   layout="fill"
                   alt="American Warehouse Cabinets"
@@ -272,7 +272,7 @@ const Home: React.FC = () => {
           <InfoSection
             height="400px"
             title={<div className="gap-2 items-center "><i className="inline-block align-bottom mr-2"><PencilRuler width={30} height={30} /></i>Design and measurements</div>}
-            description="Let us bring your vision to life - at no cost. Our expert team offers professional kitchen and cabinet design services, including precise on-site measurements, to ensure a perfect fit for our high-quality cabinetry. We work fast, stay friendly, and tailor every detail to your unique needs - so you can focus on what matters most: making your business shine."
+            description="We provide onsite measurements and design services—fast, free of charge, and tailored just for you."
             number={1}
             leftChild={
               <Button asChild size={"sm"} variant="outline">
