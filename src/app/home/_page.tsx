@@ -106,7 +106,7 @@ const Home: React.FC = () => {
             From our factory
             <br />
             <span className="font-extralight text-accent">
-              to your site.
+              to you
             </span>
           </h1>
           <div className="scroll-m-20 mt-12 flex flex-col sm:flex-row sm:items-center gap-2">

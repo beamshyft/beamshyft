@@ -60,7 +60,7 @@ export const BeamshyftFooter = () => (
           to="/contact"
           className="text-sm text-muted-foreground"
         >
-          Get a quote
+          Contact sales
         </Link>
       </FooterColumn>
       <FooterColumn>
