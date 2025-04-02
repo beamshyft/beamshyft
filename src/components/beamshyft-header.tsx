@@ -112,7 +112,7 @@ export const BeamshyftHeader = () => {
                   {item.name}
                 </Link>
               ))}
-              <QuoteButton />
+              <QuoteButton onClick={() => setOpen(false)}/>
             </nav>
           </SheetContent>
         </Sheet>

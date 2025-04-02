@@ -12,7 +12,7 @@ interface PageHeaderProps {
 const PageHeader = ({ title, description, imageSrc, children }: PageHeaderProps) => (
   <section className="w-full max-h-[60vh] md:h-[60vh] bg-primary-background relative flex flex-col items-center justify-center">
     <div className="flex flex-col z-[5] w-full gap-8 max-w-[1200px]">
-      <div className="flex flex-col items-start gap-4 bg-[white] max-w-[750px] p-8 md:p-20 md:pr-40">
+      <div className="flex flex-col items-center text-center gap-4 bg-[white] max-w-[750px] p-8 md:p-20 md:pr-40 md:text-left md:items-start">
         <h1 className="scroll-m-20 text-6xl font-bold tracking-tight lg:text-7xl">
           {title}
         </h1>

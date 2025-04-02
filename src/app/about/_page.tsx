@@ -8,7 +8,7 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col bg-primary-foreground mt-[70px]">
+    <div className="flex flex-col bg-primary-foreground">
       <div className="bg-primary-foreground flex flex-col items-center pt-20">
         <div className="flex items-start flex-row justify-center gap-4 flex-wrap max-w-[1200px]">
           <InfoSection

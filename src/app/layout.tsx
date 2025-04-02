@@ -28,7 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" style={{ colorScheme: "light" /*, scrollBehavior: "smooth"*/}} className="light" aria-readonly>
-      
+      <head>
+        <meta httpEquiv="Content-Security-Policy" content="font-src 'self' https://js.stripe.com" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >

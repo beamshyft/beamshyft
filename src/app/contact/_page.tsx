@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import PageHeader from "@/components/page-header";
 import { Button } from "@/components/ui/button";
+import InfoSection from "@/components/info-section";
 
 const Contact: React.FC = () => {
     useEffect(() => {
@@ -35,7 +36,23 @@ const Contact: React.FC = () => {
                 
                 </div>
             </PageHeader>
-        </div>
+            <div className="bg-primary-foreground flex justify-center relative">
+                <div className="bg-transparent w-[1200px] pt-20 relative">
+                    <InfoSection
+                        title="Or book a meeting"
+                        description="We can schedule a call to discuss your needs and how we can help you."
+                        // height="600px"
+                        titleClassName="text-4xl font-bold text-center"
+                        rightChild={
+                            <div className="h-fit-content w-full min-w-[320px] min-h-[700px]">
+                                <div className="calendly-inline-widget" data-url="https://calendly.com/joel-beamshyft?primary_color=d0ac81" style={{minWidth:320,height:900}}></div>
+                                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                            </div>
+                        }
+                        />
+                </div>
+            </div>
+        </div >
     );
 };
 
