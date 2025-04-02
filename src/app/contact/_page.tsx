@@ -3,7 +3,7 @@ import PageHeader from "@/components/page-header";
 import { Button } from "@/components/ui/button";
 import InfoSection from "@/components/info-section";
 import CalendlyEmbed from "@/components/calendly-embed";
-
+import Image from "next/image";
 const Contact: React.FC = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -45,8 +45,18 @@ const Contact: React.FC = () => {
                         // height="600px"
                         titleClassName="text-4xl font-bold text-center"
                         rightChild={
-                            <CalendlyEmbed
-                                    url="https://calendly.com/joel-beamshyft?primary_color=d0ac81"/>
+                            <div className="flex h-screen w-full align-center justify-center">
+                                <CalendlyEmbed />
+                            </div>
+                        }
+                        leftChild={<div className="h-full w-full relative text-center"><Image
+                            src="/animations/meeting.gif"
+                            objectFit="cover"
+                            alt="home"
+                            height={250}
+                            width={250}
+                            className="inline-block"
+                            /></div>
                         }
                         />
                 </div>

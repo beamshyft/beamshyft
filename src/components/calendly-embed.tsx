@@ -16,7 +16,7 @@ const CalendlyEmbed: React.FC = () => {
         <div
             className="calendly-inline-widget"
             data-url="https://calendly.com/joel-beamshyft?primary_color=d0ac81"
-            style={{ width: '500px', height: '900px', minWidth: "320px", minHeight: '700px' }}
+            style={{ height: 'inherit', minWidth: "320px", width: "inherit"}}
         ></div>
     );
 };
