@@ -22,7 +22,7 @@ const Catalog: React.FC = () => {
     <div className="flex flex-col bg-primary-foreground mt-[70px]">
       <PageHeader
         title="Our Catalog"
-        description="Browse our catalogs for our diverse selection of cabinets, vanities, and doors. All fully customizable."
+        description="Stock cabinets and vanities ship within 72 hours. Doors, customized cabinets, and vanities may require additional production time to meet your exact specifications."
         imageSrc="/Imágenes Alta Catálogo ID/Cocina.jpg"
       >
       </PageHeader>
@@ -68,53 +68,6 @@ const Catalog: React.FC = () => {
               </Button>
             }
           />
-          </div>
-          {/* <div className="opacity-[30%]">
-            <InfoCard
-              title="Decking, flooring, and more."
-              description="Come back soon for our new selection."
-              imageSrc="/coming_soon.png"
-            />
-          </div> */}
-          {/* lead time section */}
-
-          <InfoSection
-            title="Lead Time"
-            titleClassName="text-5xl font-bold"
-            description={
-              <span>
-                Stock cabinets and vanities ship within 72 hours. Doors, customized cabinets, and vanities may require additional production time to meet your exact specifications.
-              </span>
-            }
-            rightChild={
-              <div className="flex flex-col">
-                <div className="h-[400px] max-w-[400px] w-full relative overflow-hidden shadow-lg">
-                  <img
-                    src="\Imágenes Alta Catálogo ID\Acústica.jpg"
-                    alt="American Warehouse Cabinets"
-                    className="object-cover w-full h-full"
-                  />
-                </div>
-                <div className="h-[400px] max-w-[400px] w-full relative overflow-hidden mt-14 shadow-lg">
-                  <img
-                    src="\Imágenes Alta Catálogo ID\Rejilla-Toquilla.jpg"
-                    alt="American Warehouse Cabinets"
-                    className="object-cover w-full h-full"
-                  />
-                </div>
-              </div>
-            }
-            leftChild={
-              <div className="h-[400px] w-full relative overflow-hidden mt-14 shadow-lg">
-                <img
-                  src="\Imágenes Alta Catálogo ID\Vestidor-1.jpg"
-                  alt="American Warehouse Cabinets"
-                  className="object-cover w-full h-full"
-                />
-              </div>
-            }
-          />
-          {/* download all section */}
           <InfoSection
           reverse
           height="200px"
@@ -129,7 +82,7 @@ const Catalog: React.FC = () => {
               <FileDownload />
             }
           />
-
+	  </div>
         </div>
       </div>
     </div>
