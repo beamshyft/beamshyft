@@ -88,14 +88,14 @@ const Catalog: React.FC = () => {
             }
             rightChild={
               <div className="flex flex-col">
-                <div className="h-[400px] max-w-[400px] w-full relative rounded-2xl overflow-hidden">
+                <div className="h-[400px] max-w-[400px] w-full relative overflow-hidden shadow-lg">
                   <img
                     src="\Imágenes Alta Catálogo ID\Acústica.jpg"
                     alt="American Warehouse Cabinets"
                     className="object-cover w-full h-full"
                   />
                 </div>
-                <div className="h-[400px] max-w-[400px] w-full relative rounded-2xl overflow-hidden mt-14">
+                <div className="h-[400px] max-w-[400px] w-full relative overflow-hidden mt-14 shadow-lg">
                   <img
                     src="\Imágenes Alta Catálogo ID\Rejilla-Toquilla.jpg"
                     alt="American Warehouse Cabinets"
@@ -105,7 +105,7 @@ const Catalog: React.FC = () => {
               </div>
             }
             leftChild={
-              <div className="h-[400px] w-full relative rounded-2xl overflow-hidden mt-14">
+              <div className="h-[400px] w-full relative overflow-hidden mt-14 shadow-lg">
                 <img
                   src="\Imágenes Alta Catálogo ID\Vestidor-1.jpg"
                   alt="American Warehouse Cabinets"

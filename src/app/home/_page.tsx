@@ -213,7 +213,7 @@ const Home: React.FC = () => {
             rightChild={
 
 
-              <div className="flex flex-col  gap-8 bg-white p-8 rounded-lg shadow-lg border-4 border-dashed border-grey-500 text-center">
+              <div className="flex flex-col  gap-8 bg-white p-8 shadow-lg  text-center">
                 <PriceCard>
                     <p className="text-lg md:text-xl lg:text-2xl text-black">
                     Small solid wood kitchen for
@@ -251,7 +251,7 @@ const Home: React.FC = () => {
             description="In 3 simple steps, you can have your custom cabinets, vanities, and doors delivered to your site."
             titleClassName="text-4xl lg:text-5xl font-bold"
             rightChild={
-              <div className="h-[400px]  w-full relative rounded-2xl overflow-hidden">
+                <div className="h-[400px] w-full relative overflow-hidden shadow-lg">
                 <Image
                   id="design"
                   src="/white_shaker_kitchen_cropped_from_cabinet_3.png"
@@ -259,7 +259,7 @@ const Home: React.FC = () => {
                   layout="fill"
                   alt="American Warehouse Cabinets"
                 />
-              </div>
+                </div>
             }
             leftChild={
               <Button onClick={() => {

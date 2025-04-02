@@ -20,7 +20,7 @@ const About: React.FC = () => {
               </span>
             }
             rightChild={
-              <div className="h-[400px]  w-full relative rounded-2xl overflow-hidden">
+              <div className="h-[400px]  w-full relative overflow-hidden  shadow-lg">
                 <Image
                   src="/iStock-warm-kitchen-beamshyft-website.jpg"
                   objectFit="cover"
@@ -48,7 +48,7 @@ const About: React.FC = () => {
             title="How we do it"
             description="Traditional suppliers pass your project through many hands, each adding a markup that eats away at your bottom line. We simplify the process by manufacturing our products in-house and delivering them straight to your site, ensuring you can provide the quality your clients deserve—without the extra noise."
             rightChild={
-              <div className="h-[400px]  w-full relative rounded-2xl overflow-hidden">
+              <div className="h-[400px]  w-full relative shadow-lg overflow-hidden">
                 <Image
                   src="/Imágenes Alta Catálogo ID/Nazca-Dinámica-DelanteyAtrás.jpg"
                   objectFit="cover"
