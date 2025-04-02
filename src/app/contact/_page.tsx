@@ -13,11 +13,11 @@ const Contact: React.FC = () => {
         <div className="flex flex-col bg-primary-foreground mt-[70px]">
             <PageHeader
                 title="Get in touch"
-                description="Hours are 24/7. Call, text, or email us anytime to learn more or start a quote process."
+                description="Call, text, or email us anytime to learn more or start a quote process."
                 imageSrc="/Imágenes Alta Catálogo ID/Filo-Muro-Evolución-2.jpg"
             >
                 <div className="flex flex-col gap-4 mt-8">
-                    
+
                 <Button asChild size="lg" variant="default">
                 <a
                     href="tel:+18574887898"
@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
                     start@beamshyft.com
                 </a>
                 </Button>
-                
+
                 </div>
             </PageHeader>
             <div className="bg-primary-foreground flex justify-center relative">
