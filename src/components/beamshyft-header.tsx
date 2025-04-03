@@ -20,8 +20,8 @@ import { usePathname } from "next/navigation";
 
 const navItems = [
   { name: "Catalog", path: "/catalog" },
-  { name: "About", path: "/about" },
-  { name: "Contact", path: "/contact" },
+  { name: "Our mission", path: "/about" },
+  { name: "Contact sales", path: "/contact" },
 ];
 
 const QuoteButton = (props: React.JSX.IntrinsicAttributes & ButtonProps & React.RefAttributes<HTMLButtonElement>) => {

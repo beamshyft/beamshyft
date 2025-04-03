@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
     return (
         <div className="flex flex-col bg-primary-foreground mt-[70px]">
             <PageHeader
-                title="Get in touch"
+                title="Contact Sales"
                 description="Call, text, WhatsApp, or email us anytime to learn more or start a quote process."
                 imageSrc="/Imágenes Alta Catálogo ID/Filo-Muro-Evolución-2.jpg"
             >

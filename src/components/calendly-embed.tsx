@@ -15,7 +15,7 @@ const CalendlyEmbed: React.FC = () => {
     return (
         <div
             className="calendly-inline-widget"
-            data-url="https://calendly.com/armia-beamshyft/30min"
+            data-url="https://calendly.com/armia-beamshyft/30min?primary_color=d0ac81"
             style={{ height: 'inherit', minWidth: "320px", width: "inherit"}}
         ></div>
     );

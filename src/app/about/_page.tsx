@@ -12,7 +12,7 @@ const About: React.FC = () => {
       <div className="bg-primary-foreground flex flex-col items-center pt-20">
         <div className="flex items-start flex-row justify-center gap-4 flex-wrap max-w-[1200px]">
           <InfoSection
-            title="Lower your construction costs"
+            title="Our Mission"
             titleClassName="text-5xl font-bold"
             description={
               <span>
