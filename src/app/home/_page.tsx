@@ -148,11 +148,11 @@ const Home: React.FC = () => {
             className="min-w-full min-h-full absolute object-cover"
             style={{ pointerEvents: "none" }}
           >
-            <source src="/Beamshyft_Ad_Final_2.mp4" type="video/mp4" />
+            <source src="/Beamshyft_Introduction.mp4" type="video/mp4" />
           </video>
         </div>
 
-        <SimplePlayer src="/Beamshyft_Ad_Final_2.mp4" />
+        <SimplePlayer src="/Beamshyft_Introduction.mp4" />
       </section>
       <div className="bg-primary-foreground flex justify-center relative z-[6]">
         {/* <div className="absolute right-0 top-0 w-[500px] h-full">
