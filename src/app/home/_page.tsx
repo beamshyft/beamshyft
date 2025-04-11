@@ -13,6 +13,8 @@ import AlternatingText from "../../components/alternating-text";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
+import SimplePlayer from "@/components/media-player";
+
 const FeatureCard = ({
   caption,
   imageSrc,
@@ -97,7 +99,7 @@ const Home: React.FC = () => {
       <section
         className="w-full h-screen bg-black relative flex flex-col items-center justify-center" /*style={{background: "linear-gradient(0deg, #171717, transparent 20%)"}}*/
       >
-        <div className="flex flex-col items-center p-8 z-[5] overflow-hidden w-full relative">
+        <div className="flex flex-col items-center p-8 z-[6] overflow-hidden w-full">
           <AlternatingText
             className="text-4xl font-extralight tracking-tight lg:text-5xl mb-[-16px] text-white"
             texts={["Cabinets", "Vanities", "Doors"]}
@@ -118,7 +120,7 @@ const Home: React.FC = () => {
             </Button>
           </div>
         </div>
-        <div className="scroll-m-20 mt-200 text-secondary-background absolute bottom-8 z-[5]">
+        <div className="scroll-m-20 mt-200 text-secondary-background absolute bottom-8 z-[2]">
           <div
             className="relative cursor-pointer animate-bounce"
             onClick={() => {
@@ -135,6 +137,7 @@ const Home: React.FC = () => {
             />
           </div>
         </div>
+
         <div className="fixed top-0 left-0 w-full h-screen overflow-hidden z-[0] opacity-50">
           <video
             ref={videoRef}
@@ -145,11 +148,13 @@ const Home: React.FC = () => {
             className="min-w-full min-h-full absolute object-cover"
             style={{ pointerEvents: "none" }}
           >
-            <source src="/kitchen_sora.mp4" type="video/mp4" />
+            <source src="/Beamshyft_Ad_Final_2.mp4" type="video/mp4" />
           </video>
         </div>
+
+        <SimplePlayer src="/Beamshyft_Ad_Final_2.mp4" />
       </section>
-      <div className="bg-primary-foreground flex justify-center relative">
+      <div className="bg-primary-foreground flex justify-center relative z-[6]">
         {/* <div className="absolute right-0 top-0 w-[500px] h-full">
           <div
             className="absolute right-0 top-0 w-full h-[1000px]"

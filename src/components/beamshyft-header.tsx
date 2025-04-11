@@ -53,7 +53,7 @@ export const BeamshyftHeader = () => {
   return (
     <div
       id="header"
-      className="fixed w-full flex flex-row justify-between items-center px-4 md:px-20 py-4 bg-primary-foreground z-20 mh-36"
+      className="fixed w-full flex flex-row justify-between items-center px-4 md:px-20 py-4 bg-primary-foreground z-[8] mh-36"
       style={{
         boxShadow: isTransparent ? "" : "#888 0px 0px 20px",
         transition: "background-color 0.3s, box-shadow 0.3s",

@@ -110,5 +110,10 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  .stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
   
 }

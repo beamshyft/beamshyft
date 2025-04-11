@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
     }, []);
 
     return (
-        <div className="flex flex-col bg-primary-foreground mt-[70px]">
+        <div className="flex flex-col bg-primary-foreground mt-[70px] z-[6]">
             <PageHeader
                 title="Contact Sales"
                 description="Call, text, WhatsApp, or email us anytime to learn more or start a quote process."
