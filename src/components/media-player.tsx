@@ -1,39 +1,27 @@
-import React, { useState, useRef, useEffect } from 'react';
-import {
-    MediaController,
-    MediaControlBar,
-    MediaTimeRange,
-    MediaTimeDisplay,
-    MediaVolumeRange,
-    MediaPlayButton,
-    MediaSeekBackwardButton,
-    MediaSeekForwardButton,
-    MediaMuteButton,
-} from 'media-chrome/react';
+import React, { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 import { Play } from 'lucide-react';
 import { X } from 'lucide-react';
+import YouTube from "react-youtube";
+const SimplePlayer = () => {
 
-const SimplePlayer = ({ src }: { src: string; }) => {
-    function disableScroll() {
+    const openPlayer = () => {
+        setOpen(true);
+        document.getElementById("player-container")?.classList.add("show");
+        document.getElementById("player-container")?.classList.remove("hide");
         document.body.classList.add("stop-scrolling");
     }
-
-    function enableScroll() {
+    const closePlayer = () => {
+        setOpen(false);
+        document.getElementById("player-container")?.classList.add("hide");
+        document.getElementById("player-container")?.classList.remove("show");
         document.body.classList.remove("stop-scrolling");
     }
-
-    // Close when escape key is pressed
     const handleKeyDown = (event: KeyboardEvent) => {
         if (event.key === "Escape") {
-            setOpen(false);
-            enableScroll();
-            document.getElementById("player-container")?.classList.remove("show");
-            document.getElementById("player-container")?.classList.add("hide");
-            playerRef.current?.pause();
+            closePlayer();
         }
     }
-    // Add event listener for keydown event
     useEffect(() => {
         document.addEventListener("keydown", handleKeyDown);
         return () => {
@@ -44,19 +32,13 @@ const SimplePlayer = ({ src }: { src: string; }) => {
     const togglePlayer = () => {
         setOpen(!open);
         if (open) {
-            enableScroll();
-            document.getElementById("player-container")?.classList.add("hide");
-            document.getElementById("player-container")?.classList.remove("show");
-            playerRef.current?.pause();
+            closePlayer();
         } else {
-            document.getElementById("player-container")?.classList.add("show");
-            document.getElementById("player-container")?.classList.remove("hide");
-            setTimeout(disableScroll,300);
+            openPlayer();
         }
     };
 
     const [open, setOpen] = useState(false);
-    const playerRef = useRef<HTMLVideoElement>(null);
     return (
         <div className='absolute bottom-[240px]'>
             <style>{`
@@ -72,27 +54,17 @@ const SimplePlayer = ({ src }: { src: string; }) => {
                     `}
             </style>
             <Button variant="play" onClick={() => { togglePlayer() }}><Play fill='hsl(var(--accent))' style={{ width: 26, height: 26 }} /> Play video</Button>
-            <div id="player-container" className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-black z-[100] hide"
+            <div id="player-container" className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-black z-[100] hide py-20"
             >
-                <MediaController className='min-w-[320px] '>
-                    <video
-                        slot="media"
-                        src={src}
-                        preload="auto"
-                        ref={playerRef}
-                        crossOrigin=""
-                    />
-                    <MediaControlBar>
-                        <MediaPlayButton></MediaPlayButton>
-                        <MediaSeekBackwardButton></MediaSeekBackwardButton>
-                        <MediaSeekForwardButton></MediaSeekForwardButton>
-                        <MediaTimeRange></MediaTimeRange>
-                        <MediaTimeDisplay showDuration></MediaTimeDisplay>
-                        <MediaMuteButton></MediaMuteButton>
-                        <MediaVolumeRange></MediaVolumeRange>
-                    </MediaControlBar>
-                </MediaController>
-                <Button variant="default" className='absolute right-[12px] top-[12px] w-10 h-10 text-xl' onClick={() => { togglePlayer() }}><X style={{ width: 26, height: 26 }}/></Button>
+                {open &&
+                    (
+                        <>
+                            <YouTube videoId="Gbosg4HKKJg" className="w-full h-full flex items-center justify-center" opts={{ playerVars: { autoplay: 1, mute: 0 }, height: "100%", width: "100%" }} />
+                            <Button variant="default" className='absolute right-[12px] top-[12px] w-10 h-10 text-xl' onClick={() => { togglePlayer() }}><X style={{ width: 26, height: 26 }} /></Button>
+                        </>
+                    )
+
+                }
 
             </div>
         </div>

@@ -151,8 +151,8 @@ const Home: React.FC = () => {
             <source src="/Beamshyft_Introduction.mp4" type="video/mp4" />
           </video>
         </div>
-
-        <SimplePlayer src="/Beamshyft_Introduction.mp4" />
+        
+        <SimplePlayer />
       </section>
       <div className="bg-primary-foreground flex justify-center relative z-[6]">
         {/* <div className="absolute right-0 top-0 w-[500px] h-full">
