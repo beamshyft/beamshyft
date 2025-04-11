@@ -40,7 +40,7 @@ const SimplePlayer = () => {
 
     const [open, setOpen] = useState(false);
     return (
-        <div className='absolute bottom-[240px]'>
+        <div className='absolute bottom-[20%]'>
             <style>{`
                 #player-container.hide {
                     opacity: 0;
@@ -53,8 +53,8 @@ const SimplePlayer = () => {
                 }
                     `}
             </style>
-            <Button variant="play" onClick={() => { togglePlayer() }}><Play fill='hsl(var(--accent))' style={{ width: 26, height: 26 }} /> Play video</Button>
-            <div id="player-container" className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-black z-[100] hide py-20"
+            <Button variant="play" onClick={() => { togglePlayer() }}><Play fill='white' style={{ width: 26, height: 26 }} /> Play video</Button>
+            <div id="player-container" className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-black z-[100] hide pt-10 pb-[110px]"
             >
                 {open &&
                     (
