@@ -26,9 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" style={{ colorScheme: "light" /*, scrollBehavior: "smooth"*/}} className="light" aria-readonly>
+    <html lang="en" style={{ colorScheme: "light" /*, scrollBehavior: "smooth"*/ }} className="light" aria-readonly>
       <head>
         <meta httpEquiv="Content-Security-Policy" content="font-src 'self' https://js.stripe.com;" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RCFYYR2RZG" />
+        <script dangerouslySetInnerHTML={{__html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-RCFYYR2RZG');`}} />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
