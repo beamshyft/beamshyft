@@ -5,6 +5,10 @@ import InfoSection from "@/components/info-section";
 const About: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = "Beamshyft | Our Mission";
+    return () => {
+      document.title = "Beamshyft";
+    }
   }, []);
 
   return (

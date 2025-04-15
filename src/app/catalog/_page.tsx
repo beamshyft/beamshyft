@@ -12,6 +12,10 @@ import InfoSection from "@/components/info-section";
 const Catalog: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = "Beamshyft | Catalog";
+    return () => {
+      document.title = "Beamshyft";
+    }
   }, []);
   const download = (file: string) => {
     if (typeof window !== "undefined") {

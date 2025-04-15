@@ -7,6 +7,10 @@ import Image from "next/image";
 const Contact: React.FC = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
+        document.title = "Beamshyft | Contact Sales";
+        return () => {
+            document.title = "Beamshyft";
+        }
     }, []);
 
     return (
