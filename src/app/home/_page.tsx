@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 import { Link } from "react-router-dom";
 
-import { ArrowDown, ChevronsDown, Info } from "lucide-react";
+import { ArrowDown, ChevronsDown } from "lucide-react";
 import { Upload, PencilRuler, Factory, Truck } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
