@@ -69,15 +69,15 @@ const InfoSection = ({
               </p>
             </div>
           ) : (
-            <div className="min-w-[40px]"></div>
+            <div className="min-w-[0px] m-0"></div>
           )}
           <div
-            className="flex flex-col gap-4 z-10"
+            className="flex flex-col gap-6 z-10"
             style={{ alignItems: reverse ? "flex-end" : "flex-start" }}
           >
             <h2
               className={
-                titleClassName ? titleClassName : "text-3xl font-bold"
+                titleClassName ? titleClassName : "text-3xl font-bold b"
               }
             >
               {title}
@@ -104,7 +104,7 @@ const InfoSection = ({
               </p>
             </div>
           ) : (
-            <div className="min-w-[40px]"></div>
+            <div className="min-w-[0px]"></div>
           )}
         </div>
       </div>

@@ -33,19 +33,6 @@ const About: React.FC = () => {
                 />
               </div>
             }
-            leftChild={
-              <div className="h-full w-full relative text-center sm:text-left">
-                <Image
-                  src="/animations/piggy-bank.gif"
-                  objectFit="cover"
-                  alt="home"
-                  height={200}
-                  width={200}
-
-                  className="inline-block"
-                />
-              </div>
-            }
           />
           <InfoSection
             reverse
@@ -58,19 +45,6 @@ const About: React.FC = () => {
                   objectFit="cover"
                   layout="fill"
                   alt="American Warehouse Cabinets"
-                />
-              </div>
-            }
-            leftChild={
-              <div className="h-full w-full relative text-center sm:text-right">
-                <Image
-                  src="/animations/worker.gif"
-                  objectFit="cover"
-                  alt="home"
-                  height={200}
-                  width={200}
-
-                  className="inline-block"
                 />
               </div>
             }
