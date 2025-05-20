@@ -14,6 +14,7 @@ import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
 import SimplePlayer from "@/components/media-player";
+import Testimonial from "@/components/testimonial";
 
 const FeatureCard = ({
   caption,
@@ -167,17 +168,23 @@ const Home: React.FC = () => {
         </div> */}
 
         <div className="bg-transparent max-w-[1200px] pt-20 relative overflow-hidden">
-          <div className="bg-transparent absolute left-0 pl-[14px] md:pl-[50px] h-full pb-20 pt-10 z-0">
-            <div className="border-l-2 border-primary-background h-full border-[#bbb]"></div>
+          <div className="bg-transparent absolute left-0 pl-[14px] md:pl-[50px] h-full pb-20 pt-10 -z-[5]">
+            <div className="border-l-2 border-primary-background h-full"></div>
           </div>
           <InfoSection
             title="Lower your construction costs"
-            titleClassName="text-5xl lg:text-6xl font-bold"
-            description="Eliminate the middleman and get high-quality materials for the best prices available, guaranteed."
+            titleClassName="text-6xl lg:text-7xl font-bold"
+            description={
+              <>
+              <span className="text-xl font-normal">
+                We are a <span className="font-bold text-2xl">Boston-based startup</span> leveraging state-of-the-art factories across multiple continents to eliminate multiple middlemen and supply high-quality materials for the best prices available, guaranteed.
+              </span>
+              </>
+            }
             height="400px"
             rightChild={
 
-              <div className="h-full w-full relative text-center">
+              <div className="h-full w-full relative text-center items-center flex justify-center">
                 <Image
                   src="/animations/home3.gif"
                   objectFit="cover"
@@ -190,6 +197,10 @@ const Home: React.FC = () => {
               </div>
             }
           />
+          <div className="flex flex-row gap-4 justify-center items-start mb-10 relative flex-wrap z-[5] p-4">
+            <Testimonial name="Moses Rezaei" title="11 Billow Ave, Revere, MA 02151" message="Solid communication and regular updates on the status. They beat pricing I did not expect them to beat. I'll be buying from them again." />
+            <Testimonial name="Paul Goulas" title="101 E Hadley Rd, Amherst, MA 01002" message="These guys are awesome! I was a bit skeptical at first, but they really impressed me with their quick responses and attention to detail. I made several changes along the way, and they were super accommodating every time. They sent me multiple design options to choose from, which no other company has done for us before. They never rushed the process and seemed dedicated to providing great service and a quality product. I highly recommend it!" />
+          </div>
           <div className="p-4 flex flex-row justify-center items-center gap-4">
             <div className="flex flex-row gap-6 justify-center mb-[100px] text-center flex-wrap z-[5] max-w-[780px]">
               {[
@@ -220,7 +231,7 @@ const Home: React.FC = () => {
             rightChild={
 
 
-              <div className="flex flex-col  gap-8 bg-white p-8 shadow-lg  text-center">
+              <div className="flex flex-col  gap-8 bg-white p-8 shadow-lg  text-center border-2 border-black/10">
                 <PriceCard>
                     <p className="text-lg md:text-xl lg:text-2xl text-black">
                     Small solid wood kitchen for
@@ -256,9 +267,9 @@ const Home: React.FC = () => {
           <InfoSection
             title="How it works"
             description="In 3 simple steps, you can have your custom cabinets, vanities, and doors delivered to your site."
-            titleClassName="text-4xl lg:text-5xl font-bold"
+            titleClassName="text-5xl lg:text-6xl font-bold"
             rightChild={
-                <div className="h-[400px] w-full relative overflow-hidden shadow-lg">
+                <div className="h-[400px] w-full relative overflow-hidden shadow-xl">
                 <Image
                   id="design"
                   src="/white_shaker_kitchen_cropped_from_cabinet_3.jpg"
@@ -311,7 +322,6 @@ const Home: React.FC = () => {
           /> */}
           <InfoSection
             height="400px"
-
             title={<div className="flex flex-row gap-2 items-center"><Factory width={30} height={30} />Manufacture</div>}
             description="We’ll manufacture your items to your exact specifications - typically in no more than two weeks - so you get the perfect fit without the wait."
             number={2}
@@ -330,7 +340,6 @@ const Home: React.FC = () => {
           />
           <InfoSection
             height="400px"
-
             title={<div className="flex flex-row gap-2 items-center"><Truck width={30} height={30} />Deliver</div>}
             description="We'll deliver your items directly to your site in the shortest time possible. Products can be unassembled or factory assembled, ready to be installed."
             number={3}
