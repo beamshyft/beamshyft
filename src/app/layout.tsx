@@ -19,8 +19,7 @@ export const metadata: Metadata = {
   description: "Beamshyft website",
 };
 
-
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

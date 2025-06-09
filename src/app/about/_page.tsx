@@ -20,7 +20,7 @@ const About: React.FC = () => {
             titleClassName="text-5xl font-bold"
             description={
               <span>
-                Eliminate multiple middlemen and supply high-quality materials for the best prices available, guaranteed.
+                Eliminate multiple middlemen and supply high-quality materials for the best prices available, guaranteed. Headquartered in Boston, our startup leverages state-of-the-art factories across multiple continents to deliver world-class products.
               </span>
             }
             rightChild={

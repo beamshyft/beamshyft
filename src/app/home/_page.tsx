@@ -66,10 +66,20 @@ const PriceCard = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
+const isMobileBrowser = () => {
+  if (typeof navigator === "undefined") return false;
+  return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+};
+
 const Home: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const isPlayingRef = useRef(isPlaying);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(isMobileBrowser());
+  }, []);
 
   useEffect(() => {
     isPlayingRef.current = isPlaying;
@@ -97,6 +107,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="flex flex-col">
+      {!isMobile && (
       <section
         className="w-full h-screen bg-black relative flex flex-col items-center justify-center" /*style={{background: "linear-gradient(0deg, #171717, transparent 20%)"}}*/
       >
@@ -155,6 +166,7 @@ const Home: React.FC = () => {
         
         <SimplePlayer />
       </section>
+      )}
       <div className="bg-primary-foreground flex justify-center relative z-[6]">
         {/* <div className="absolute right-0 top-0 w-[500px] h-full">
           <div
@@ -177,7 +189,7 @@ const Home: React.FC = () => {
             description={
               <>
               <span className="text-xl font-normal">
-                We are a <span className="font-bold text-2xl">Boston-based startup</span> leveraging state-of-the-art factories across multiple continents to eliminate multiple middlemen and supply high-quality materials for the best prices available, guaranteed.
+                Eliminate the middleman and get high-quality materials at the best prices available, guaranteed.
               </span>
               </>
             }
@@ -197,20 +209,16 @@ const Home: React.FC = () => {
               </div>
             }
           />
-          <div className="flex flex-row gap-4 justify-center items-start mb-10 relative flex-wrap z-[5] p-4">
-            <Testimonial name="Moses Rezaei" title="11 Billow Ave, Revere, MA 02151" message="Solid communication and regular updates on the status. They beat pricing I did not expect them to beat. I'll be buying from them again." />
-            <Testimonial name="Paul Goulas" title="101 E Hadley Rd, Amherst, MA 01002" message="These guys are awesome! I was a bit skeptical at first, but they really impressed me with their quick responses and attention to detail. I made several changes along the way, and they were super accommodating every time. They sent me multiple design options to choose from, which no other company has done for us before. They never rushed the process and seemed dedicated to providing great service and a quality product. I highly recommend it!" />
-          </div>
-          <div className="p-4 flex flex-row justify-center items-center gap-4">
+          <div className="p-4 flex flex-row justify-center items-center gap-4 pt-10">
             <div className="flex flex-row gap-6 justify-center mb-[100px] text-center flex-wrap z-[5] max-w-[780px]">
               {[
-                { caption: "Carb2 compliant", imageSrc: "/animations/leaf.gif" },
+                { caption: "No particle board", imageSrc: "/animations/no-particle.gif" },
                 { caption: "Price match +20% off extra guaranteed", imageSrc: "/animations/price-match.gif" },
                 { caption: "72 hour delivery on stock items", imageSrc: "/animations/delivery.gif" },
                 { caption: "30 day money back guarantee", imageSrc: "/animations/refund.gif" },
                 { caption: "2 year warranty on all products", imageSrc: "/animations/warranty.gif" },
                 { caption: "No minimum order quantity", imageSrc: "/animations/warehouse.gif" },
-                { caption: "No particle board", imageSrc: "/animations/no-particle.gif" },
+                { caption: "Carb2 compliant", imageSrc: "/animations/leaf.gif" },
                 { caption: "100% reforested", imageSrc: "/animations/reforest.gif" },
               ].map((feature, index) => (
                 <FeatureCard
@@ -356,6 +364,21 @@ const Home: React.FC = () => {
               </div>
             }
           />
+          
+          <div className="flex flex-row gap-4 justify-center items-start mb-10 relative flex-wrap z-[5] p-4">
+            <Testimonial name="Moses Rezaei" title="11 Billow Ave, Revere, MA 02151" message="Solid communication and regular updates on the status. They beat pricing I did not expect them to beat. I'll be buying from them again." />
+            <Testimonial name="Paul Goulas" title="101 E Hadley Rd, Amherst, MA 01002" message="These guys are awesome! I was a bit skeptical at first, but they really impressed me with their quick responses and attention to detail. I made several changes along the way, and they were super accommodating every time. They sent me multiple design options to choose from, which no other company has done for us before. They never rushed the process and seemed dedicated to providing great service and a quality product. I highly recommend it!" />
+          </div>
+          {isMobile && (
+          <section className="flex flex-col items-center justify-center bg-secondary-background py-10 relative">
+            <video
+              controls
+              poster="/Beamshyft_Introduction.mp4"
+              className="min-w-full min-h-full object-cover"
+            >
+              <source src="/Beamshyft_Introduction.mp4" type="video/mp4" />
+            </video>
+          </section>)}
           <InfoSection
             title="Make the shyft today"
             titleClassName="text-4xl lg:text-5xl font-bold"

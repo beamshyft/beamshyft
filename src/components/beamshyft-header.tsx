@@ -33,16 +33,23 @@ const QuoteButton = (props: React.JSX.IntrinsicAttributes & ButtonProps & React.
     </Button>
   );
 }
-
+const isMobileBrowser = () => {
+  if (typeof navigator === "undefined") return false;
+  return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+};
 
 export const BeamshyftHeader = () => {
-  const [isTransparent, setIsTransparent] = useState(true);
+  const [hasShadow, setHasShadow] = useState(true);
   const [open, setOpen] = React.useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    setIsMobile(isMobileBrowser());
+  }, []);
 
   const pathname = usePathname();
   useEffect(() => {
     const handleScroll = () => {
-      setIsTransparent(window.scrollY < 100);
+      setHasShadow(window.scrollY < 10);
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll);
@@ -50,17 +57,19 @@ export const BeamshyftHeader = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [pathname]);
+
+  const invert = !isMobile && hasShadow && pathname === "/";
   return (
     <div
       id="header"
       className="fixed w-full flex flex-row justify-between items-center px-4 md:px-20 py-4 bg-primary-foreground z-[8] mh-36"
       style={{
-        boxShadow: isTransparent ? "" : "#888 0px 0px 20px",
+        boxShadow: hasShadow ? "" : "#888 0px 0px 20px",
         transition: "background-color 0.3s, box-shadow 0.3s",
-        backgroundColor: isTransparent && pathname === "/" ? "transparent" : "hsl(var(--primary-foreground))",}}
+        backgroundColor: invert ? "transparent" : "hsl(var(--primary-foreground))",}}
     >
       <NavigationMenu>
-        <NavigationMenuList className={isTransparent && pathname === "/" ? "invert" : ""}>
+        <NavigationMenuList className={invert ? "invert" : ""}>
           <NavigationMenuItem>
             <Link to="/">
               <BeamshyftLogo width={180} style={{paddingRight: "18px"}}/>
@@ -84,7 +93,7 @@ export const BeamshyftHeader = () => {
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
             <div className="sm:hidden cursor-pointer">
-              <Menu className="h-8 w-8" color={isTransparent && pathname === "/" ? "white" : "black"} />
+              <Menu className="h-8 w-8" color={invert ? "white" : "black"} />
               <span className="sr-only">Toggle menu</span>
             </div>
           </SheetTrigger>
