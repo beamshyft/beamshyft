@@ -20,7 +20,7 @@ const About: React.FC = () => {
             titleClassName="text-5xl font-bold"
             description={
               <span>
-                Eliminate multiple middlemen and supply high-quality materials for the best prices available, guaranteed. Headquartered in Boston, our startup leverages state-of-the-art factories across multiple continents to deliver world-class products.
+                Eliminate middlemen and supply quality products for the best prices available, guaranteed.
               </span>
             }
             rightChild={
@@ -37,7 +37,7 @@ const About: React.FC = () => {
           <InfoSection
             reverse
             title="How we do it"
-            description="Traditional suppliers pass your project through many hands, each adding a markup that eats away at your bottom line. We simplify the process by manufacturing our products in-house and delivering them straight to your site, ensuring you can provide the quality your clients deserve—without the extra noise."
+            description="Based in Boston, our startup leverages state-of-the-art factories across multiple continents to deliver quality products at the best prices. Traditional suppliers pass your project through many hands, each adding a markup that eats away at your bottom line. We cut them out and deliver the products straight from the manufacturer to your site."
             rightChild={
               <div className="h-[400px]  w-full relative shadow-lg overflow-hidden">
                 <Image
