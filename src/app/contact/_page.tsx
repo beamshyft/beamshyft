@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
         <div className="flex flex-col bg-primary-foreground mt-[70px] z-[6]">
             <PageHeader
                 title="Contact Sales"
-                description="Call, text, WhatsApp, or email us anytime to learn more or start a quote process."
+                description="Call, text, or email us to learn more or start a quote process."
                 imageSrc="/Imágenes Alta Catálogo ID/Filo-Muro-Evolución-2.jpg"
             >
                 <div className="flex flex-col gap-4 mt-8">
@@ -25,7 +25,7 @@ const Contact: React.FC = () => {
                 <Button asChild size="lg" variant="default">
                 <a
                     href="tel:+18574887898"
-                    className="underline text-xl"
+                    className="text-xl"
                 >
                     +1 (857) 488-7898
                 </a>
@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
                 <Button asChild size="lg" variant="outline">
                 <a
                     href="mailto:start@beamshyft.com"
-                    className="underline text-xl"
+                    className="text-xl"
                 >
                     start@beamshyft.com
                 </a>
@@ -44,8 +44,8 @@ const Contact: React.FC = () => {
             <div className="bg-primary-foreground flex justify-center relative">
                 <div className="bg-transparent w-[1200px] pt-20 relative">
                     <InfoSection
-                        title="Or book a meeting"
-                        description="We can schedule a call to discuss your needs and how we can help you."
+                        title="Book a meeting"
+                        description="Schedule a call to discuss your needs and learn more."
                         // height="600px"
                         titleClassName="text-4xl font-bold text-center"
                         rightChild={
