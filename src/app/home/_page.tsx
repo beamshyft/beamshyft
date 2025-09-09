@@ -184,7 +184,7 @@ const Home: React.FC = () => {
             <div className="border-l-2 border-primary-background h-full"></div>
           </div>
           <InfoSection
-            title="Lower your construction costs"
+            title="Lower your material costs by up to 75%"
             titleClassName="text-6xl lg:text-7xl font-bold"
             description={
               <>
@@ -298,7 +298,7 @@ const Home: React.FC = () => {
           <InfoSection
             height="400px"
             title={<div className="gap-2 items-center "><i className="inline-block align-bottom mr-2"><PencilRuler width={30} height={30} /></i>Design and measurements</div>}
-            description="We provide onsite measurements and design services - fast, free of charge, and tailored just for you."
+            description="Our team takes care of onsite measurements, and we offer fast, free design services tailored precisely to your project’s vision and timeline."
             number={1}
             leftChild={
               <Button asChild size={"sm"} variant="outline">
@@ -331,7 +331,7 @@ const Home: React.FC = () => {
           <InfoSection
             height="400px"
             title={<div className="flex flex-row gap-2 items-center"><Factory width={30} height={30} />Manufacture</div>}
-            description="We’ll manufacture your items to your exact specifications - typically in no more than two weeks - so you get the perfect fit without the wait."
+            description="Our factories manufacture your items to your exact specifications so you get the perfect fit for your design."
             number={2}
             rightChild={
               <div className="h-full w-full relative text-center">
@@ -349,7 +349,7 @@ const Home: React.FC = () => {
           <InfoSection
             height="400px"
             title={<div className="flex flex-row gap-2 items-center"><Truck width={30} height={30} />Deliver</div>}
-            description="We'll deliver your items directly to your site in the shortest time possible. Products can be unassembled or factory assembled, ready to be installed."
+            description="We deliver your items directly to your site exactly as you need them, unassembled to save space or factory assembled for quick installation."
             number={3}
             rightChild={
               <div className="h-full w-full relative text-center">
