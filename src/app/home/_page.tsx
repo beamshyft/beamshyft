@@ -234,7 +234,16 @@ const Home: React.FC = () => {
           <InfoSection
             reverse
             title="Unbeatable prices"
-            description="We guarantee the best prices on the market. If you find a better price, we'll match it."
+            description={
+		<>
+		We guarantee the best prices on the market. If you find a better price, we&#39;ll match it.
+		<br />
+		<br />
+		Order by calling (857) 488-7898
+		<br />
+		Order by emailing start@beamshyft.com
+		</>
+	    }
             titleClassName="text-4xl lg:text-5xl font-bold"
             rightChild={
 
