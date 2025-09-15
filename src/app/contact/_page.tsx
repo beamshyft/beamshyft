@@ -62,6 +62,10 @@ const Contact: React.FC = () => {
                         />
                 </div>
             </div>
+          <div className="flex flex-row gap-4 justify-center items-start mb-10 relative flex-wrap z-[5] p-4">
+            <Testimonial name="Moses Rezaei" title="11 Billow Ave, Revere, MA 02151" message="Solid communication and regular updates on the status. They beat pricing I did not expect them to beat. I'll be buying from them again." />
+            <Testimonial name="Paul Goulas" title="101 E Hadley Rd, Amherst, MA 01002" message="These guys are awesome! I was a bit skeptical at first, but they really impressed me with their quick responses and attention to detail. I made several changes along the way, and they were super accommodating every time. They sent me multiple design options to choose from, which no other company has done for us before. They never rushed the process and seemed dedicated to providing great service and a quality product. I highly recommend it!" />
+          </div>
         </div >
     );
 };
