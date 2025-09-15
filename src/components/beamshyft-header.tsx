@@ -20,7 +20,6 @@ import { usePathname } from "next/navigation";
 
 const navItems = [
   { name: "Catalog", path: "/catalog" },
-  { name: "Our mission", path: "/about" },
   { name: "Contact sales", path: "/contact" },
 ];
 
