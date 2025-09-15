@@ -39,12 +39,6 @@ export const BeamshyftFooter = () => (
           Home
         </Link>
         <Link
-          to="/contact"
-          className="text-sm text-muted-foreground"
-        >
-          Contact
-        </Link>
-        <Link
           to="/catalog"
           className="text-sm text-muted-foreground"
         >
