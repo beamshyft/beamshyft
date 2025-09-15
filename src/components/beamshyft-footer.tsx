@@ -78,6 +78,13 @@ export const BeamshyftFooter = () => (
           LinkedIn
         </Link>
       </FooterColumn>
+      <FooterColumn>
+	<div
+	dangerouslySetInnerHTML={{ __html:
+	`<iframe border="0" frameborder="0" style="border: 0; height:76px; width:165px;" src="https://seal-boston.bbb.org/frame/blue-seal-120-61-bbb-568987.png?chk=499EE60BF4"></iframe>`
+	}}
+	/>
+      </FooterColumn>
     </FooterContent>
     <FooterBottom>
       <div>© 2025 Beamshyft LLC. All rights reserved</div>
