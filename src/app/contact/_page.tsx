@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import PageHeader from "@/components/page-header";
 import { Button } from "@/components/ui/button";
 import InfoSection from "@/components/info-section";
 import CalendlyEmbed from "@/components/calendly-embed";
 import Image from "next/image";
+import Testimonial from "@/components/testimonial";
 const Contact: React.FC = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -14,39 +14,36 @@ const Contact: React.FC = () => {
     }, []);
 
     return (
-        <div className="flex flex-col bg-primary-foreground mt-[70px] z-[6]">
-            <PageHeader
-                title="Contact Sales"
-                description="Call, text, or email us to learn more or start a quote process."
-                imageSrc="/Imágenes Alta Catálogo ID/Filo-Muro-Evolución-2.jpg"
-            >
-                <div className="flex flex-col gap-4 mt-8">
+        <div className="flex flex-col bg-primary-foreground mt-[70px] z-[6] md:items-center">
+	  <div className="text-5xl md:text-9xl text-center p-4">
+	  Contact Sales
+	  </div>
+	  <div className="flex flex-col md:flex-row gap-4 mt-8 items-center">
 
-                <Button asChild size="lg" variant="default">
-                <a
-                    href="tel:+18574887898"
-                    className="text-xl"
-                >
-                    +1 (857) 488-7898
-                </a>
-                </Button>
-                <Button asChild size="lg" variant="outline">
-                <a
-                    href="mailto:start@beamshyft.com"
-                    className="text-xl"
-                >
-                    start@beamshyft.com
-                </a>
-                </Button>
+	  <Button asChild size="lg" variant="default" className="w-64" >
+	  <a
+	      href="tel:+18574887898"
+	      className="text-xl"
+	  >
+	      +1 (857) 488-7898
+	  </a>
+	  </Button>
+	  <Button asChild size="lg" variant="outline" className="w-64" >
+	  <a
+	      href="mailto:start@beamshyft.com"
+	      className="text-xl"
+	  >
+	      start@beamshyft.com
+	  </a>
+	  </Button>
 
-                </div>
-            </PageHeader>
+	  </div>
             <div className="bg-primary-foreground flex justify-center relative">
                 <div className="bg-transparent w-[1200px] pt-20 relative">
                     <InfoSection
                         title="Book a meeting"
                         description="Schedule a call to discuss your needs and learn more."
-                        // height="600px"
+                        height="80vh"
                         titleClassName="text-4xl font-bold text-center"
                         rightChild={
                             <div className="flex h-screen w-full align-center justify-center">

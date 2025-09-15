@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import InfoCard from "@/components/info-card";
 
 import { FileDownload } from "@/components/file-download";
-import PageHeader from "@/components/page-header";
 import InfoSection from "@/components/info-section";
 
 const Catalog: React.FC = () => {
@@ -24,12 +23,9 @@ const Catalog: React.FC = () => {
   };
   return (
     <div className="flex flex-col bg-primary-foreground mt-[70px] z-[6]">
-      <PageHeader
-        title="Our Catalog"
-        description="Stock cabinets and vanities ship within 72 hours. Doors, customized cabinets, and vanities may require additional production time to meet your exact specifications."
-        imageSrc="/Imágenes Alta Catálogo ID/Cocina.jpg"
-      >
-      </PageHeader>
+      <div className="text-5xl md:text-9xl text-center p-4">
+      Our Catalogs
+      </div>
       <div className="bg-primary-foreground flex flex-col items-center">
         <div className="flex items-start flex-row justify-center gap-4 flex-wrap max-w-[1200px]">
           <div className="flex items-start flex-row justify-center gap-4 mb-10 flex-wrap pt-8">

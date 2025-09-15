@@ -52,7 +52,7 @@ const InfoSection = ({
   return !isMobile ? (
     <section
       className={`w-full bg-transparent min-h-[500px] relative mb-10`}
-      style={height ? { minHeight: height } : {}}
+      style={height ? { maxHeight: height } : {}}
     >
       <div className="grid grid-cols-2 gap-16 p-8">
         <div
