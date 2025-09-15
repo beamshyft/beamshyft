@@ -57,7 +57,8 @@ export const BeamshyftHeader = () => {
     };
   }, [pathname]);
 
-  const invert = !isMobile && hasShadow && pathname === "/";
+  /* const invert = !isMobile && hasShadow && pathname === "/"; */
+  const invert = false;
   return (
     <div
       id="header"

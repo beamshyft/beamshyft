@@ -107,66 +107,6 @@ const Home: React.FC = () => {
 
   return (
     <div className="flex flex-col">
-      {!isMobile && (
-      <section
-        className="w-full h-screen bg-black relative flex flex-col items-center justify-center" /*style={{background: "linear-gradient(0deg, #171717, transparent 20%)"}}*/
-      >
-        <div className="flex flex-col items-center p-8 z-[6] overflow-hidden w-full">
-          <AlternatingText
-            className="text-4xl font-extralight tracking-tight lg:text-5xl mb-[-16px] text-white"
-            texts={["Cabinets", "Vanities", "Doors"]}
-          />
-          <h1 className="scroll-m-20 text-5xl font-bold tracking-tight lg:text-7xl text-center min-w-[320px] text-white">
-            From our factory
-            <br />
-            <span className="font-extralight text-accent">
-              to you
-            </span>
-          </h1>
-          <div className="scroll-m-20 mt-12 flex flex-col sm:flex-row sm:items-center gap-2">
-            <Button asChild variant="outline" size={"lg"} className="w-[190px]">
-              <Link to="/catalog">Browse our catalog</Link>
-            </Button>
-            <Button asChild size={"lg"} className="w-[190px]">
-              <Link to="/contact">Contact sales</Link>
-            </Button>
-          </div>
-        </div>
-        <div className="scroll-m-20 mt-200 text-secondary-background absolute bottom-8 z-[2]">
-          <div
-            className="relative cursor-pointer animate-bounce"
-            onClick={() => {
-              window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
-            }}
-          >
-            <ChevronsDown
-              size={50}
-              color="white"
-              style={{
-                maskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)",
-                WebkitMaskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)",
-              }}
-            />
-          </div>
-        </div>
-
-        <div className="fixed top-0 left-0 w-full h-screen overflow-hidden z-[0] opacity-50">
-          <video
-            ref={videoRef}
-            autoPlay
-            playsInline
-            loop
-            muted
-            className="min-w-full min-h-full absolute object-cover"
-            style={{ pointerEvents: "none" }}
-          >
-            <source src="/Beamshyft_Introduction.mp4" type="video/mp4" />
-          </video>
-        </div>
-        
-        <SimplePlayer />
-      </section>
-      )}
       <div className="bg-primary-foreground flex justify-center relative z-[6]">
         {/* <div className="absolute right-0 top-0 w-[500px] h-full">
           <div
