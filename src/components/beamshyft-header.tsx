@@ -32,18 +32,22 @@ const QuoteButton = (props: React.JSX.IntrinsicAttributes & ButtonProps & React.
     </Button>
   );
 }
+/*
 const isMobileBrowser = () => {
   if (typeof navigator === "undefined") return false;
   return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 };
+*/
 
 export const BeamshyftHeader = () => {
   const [hasShadow, setHasShadow] = useState(true);
   const [open, setOpen] = React.useState(false);
+  /*
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     setIsMobile(isMobileBrowser());
   }, []);
+  */
 
   const pathname = usePathname();
   useEffect(() => {

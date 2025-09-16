@@ -3,17 +3,15 @@ import React, { useEffect, useRef, useState } from "react";
 
 import { Link } from "react-router-dom";
 
-import { ArrowDown, ChevronsDown } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { Upload, PencilRuler, Factory, Truck } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import InfoSection from "../../components/info-section";
-import AlternatingText from "../../components/alternating-text";
 
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
-import SimplePlayer from "@/components/media-player";
 import Testimonial from "@/components/testimonial";
 
 const FeatureCard = ({
