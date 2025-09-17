@@ -23,7 +23,7 @@ const Catalog: React.FC = () => {
   };
   return (
     <div className="flex flex-col bg-primary-foreground mt-[70px] z-[6]">
-      <div className="text-5xl md:text-9xl text-center p-4">
+      <div className="text-5xl md:text-8xl text-center p-4">
       Our Catalogs
       </div>
       <div className="bg-primary-foreground flex flex-col items-center">
