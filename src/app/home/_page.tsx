@@ -190,7 +190,7 @@ const Home: React.FC = () => {
                 <PriceCard>
                     <p className="text-lg md:text-xl lg:text-2xl text-black">
                     Small solid wood kitchen for
-                      <span className="text-green-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $3000 </span>
+                      <span className="text-green-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $3,000 </span>
                       instead of&nbsp;
                       <span className="line-through text-red-500 text-lg md:text-xl lg:text-2xl">$10,000</span>
                     </p>
@@ -198,7 +198,7 @@ const Home: React.FC = () => {
                 <PriceCard>
                     <p className="text-lg md:text-xl lg:text-2xl text-black">
                     Medium solid wood kitchen for
-                      <span className="text-green-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $5000 </span>
+                      <span className="text-green-500 font-bold text-2xl md:text-3xl lg:text-4xl"> $5,000 </span>
                       instead of&nbsp;
                       <span className="line-through text-red-500 text-lg md:text-xl lg:text-2xl">$20,000</span>
                     </p>
