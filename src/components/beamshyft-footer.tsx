@@ -51,7 +51,7 @@ export const BeamshyftFooter = () => (
           Contact sales
         </Link>
 	<Link
-	  to="/privacy.txt"
+	  to="https://beamshyft.com/privacy.txt"
           className="text-sm text-muted-foreground"
 	>
 	  Privacy Policy
