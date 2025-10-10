@@ -50,12 +50,14 @@ export const BeamshyftFooter = () => (
         >
           Contact sales
         </Link>
-	<Link
-	  to="https://beamshyft.com/privacy.txt"
+	<a
+	  href="https://beamshyft.com/privacy.txt"
+    	  target="_blank"
+          rel="noopener noreferrer"
           className="text-sm text-muted-foreground"
 	>
 	  Privacy Policy
-	</Link>
+	</a>
       </FooterColumn>
       <FooterColumn>
         <h3 className="text-md pt-1 font-semibold">Social</h3>
