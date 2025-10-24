@@ -42,6 +42,7 @@ const Catalog: React.FC = () => {
                 </Button>
               }
             />
+	    {/*
             <InfoCard
               title="Vanities"
               description="View our variety of bathroom vanities."
@@ -82,6 +83,7 @@ const Catalog: React.FC = () => {
                 <FileDownload />
               }
             />
+	   */}
           </div>
         </div>
       </div>
