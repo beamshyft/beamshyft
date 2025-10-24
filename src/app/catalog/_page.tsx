@@ -5,8 +5,8 @@ import React, { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import InfoCard from "@/components/info-card";
 
-import { FileDownload } from "@/components/file-download";
-import InfoSection from "@/components/info-section";
+//import { FileDownload } from "@/components/file-download";
+//import InfoSection from "@/components/info-section";
 
 const Catalog: React.FC = () => {
   useEffect(() => {
