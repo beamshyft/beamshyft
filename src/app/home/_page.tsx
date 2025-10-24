@@ -278,7 +278,7 @@ const Home: React.FC = () => {
           <InfoSection
             height="400px"
             title={<div className="flex flex-row gap-2 items-center"><Factory width={30} height={30} />Design</div>}
-            description="We work with you to design your kitcheb. You take the lead, and our  design team takes care of the rest, all free of charge."
+            description="We work with you to design your kitchen. You take the lead, and our  design team takes care of the rest. All free of charge."
             number={2}
             rightChild={
               <div className="h-full w-full relative text-center">
