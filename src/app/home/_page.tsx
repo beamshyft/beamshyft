@@ -221,7 +221,7 @@ const Home: React.FC = () => {
           />
           <InfoSection
             title="How it works"
-            description="In 3 simple steps, you can have your cabinets, vanities, and doors delivered to your site."
+            description="In 3 simple steps, you can have your materials delivered to your site."
             titleClassName="text-5xl lg:text-6xl font-bold"
             rightChild={
                 <div className="h-[400px] w-full relative overflow-hidden shadow-xl">
