@@ -122,12 +122,12 @@ const Home: React.FC = () => {
             <div className="border-l-2 border-primary-background h-full"></div>
           </div>
           <InfoSection
-            title="Lower your material costs by up to 75%"
+            title="Build your kitchen for up to 75% less."
             titleClassName="text-6xl lg:text-7xl font-bold"
             description={
               <>
               <span className="text-xl font-normal">
-                Eliminate the middleman and get high-quality materials at the best prices available, guaranteed.
+                Eliminate the middleman and get high-quality kitchen materials at the best prices available, guaranteed.
               </span>
               </>
             }
@@ -244,8 +244,8 @@ const Home: React.FC = () => {
           />
           <InfoSection
             height="400px"
-            title={<div className="gap-2 items-center "><i className="inline-block align-bottom mr-2"><PencilRuler width={30} height={30} /></i>Design and measurements</div>}
-            description="Our team takes care of onsite measurements, and we offer fast, free design services tailored precisely to your project’s vision and timeline."
+            title={<div className="gap-2 items-center "><i className="inline-block align-bottom mr-2"><PencilRuler width={30} height={30} /></i>Measurements</div>}
+            description="Submit your own measurements or request free onsite onsite measurements from our team."
             number={1}
             leftChild={
               <Button asChild size={"sm"} variant="outline">
@@ -277,8 +277,8 @@ const Home: React.FC = () => {
           /> */}
           <InfoSection
             height="400px"
-            title={<div className="flex flex-row gap-2 items-center"><Factory width={30} height={30} />Manufacture</div>}
-            description="Our factories manufacture your items to your exact specifications so you get the perfect fit for your design."
+            title={<div className="flex flex-row gap-2 items-center"><Factory width={30} height={30} />Design</div>}
+            description="We work with you to design your kitcheb. You take the lead, and our  design team takes care of the rest, all free of charge."
             number={2}
             rightChild={
               <div className="h-full w-full relative text-center">
