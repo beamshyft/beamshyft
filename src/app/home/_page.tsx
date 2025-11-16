@@ -245,7 +245,7 @@ const Home: React.FC = () => {
           <InfoSection
             height="400px"
             title={<div className="gap-2 items-center "><i className="inline-block align-bottom mr-2"><PencilRuler width={30} height={30} /></i>Measure</div>}
-            description="Submit your own measurements or request free onsite onsite measurements from our team."
+            description="Submit your own measurements or request free onsite measurements from our team."
             number={1}
             leftChild={
               <Button asChild size={"sm"} variant="outline">
