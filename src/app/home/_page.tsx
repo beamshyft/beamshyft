@@ -151,7 +151,7 @@ const Home: React.FC = () => {
             <div className="flex flex-row gap-6 justify-center mb-[100px] text-center flex-wrap z-[5] max-w-[780px]">
               {[
                 { caption: "No particle board", imageSrc: "/animations/no-particle.gif" },
-                { caption: "Price match +20% off extra guaranteed", imageSrc: "/animations/price-match.gif" },
+                { caption: "Price match guaranteed", imageSrc: "/animations/price-match.gif" },
                 { caption: "72 hour delivery on stock items", imageSrc: "/animations/delivery.gif" },
                 { caption: "30 day money back guarantee", imageSrc: "/animations/refund.gif" },
                 { caption: "2 year warranty on all products", imageSrc: "/animations/warranty.gif" },
