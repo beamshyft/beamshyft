@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 const BeamshyftLogo: React.FC<React.ImgHTMLAttributes<HTMLImageElement>> = (props) => {
     return (<img
-        src="/beamshyft_white.PNG"
+        src="/logo.jpg"
         alt="Beamshyft Logo"
         width={props.width || 164}
-        className="invert block pt-1"
+        className="block pt-1"
         {...props}
     />);
     };

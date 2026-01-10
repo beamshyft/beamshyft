@@ -95,7 +95,7 @@ export const BeamshyftFooter = () => (
       </FooterColumn>
     </FooterContent>
     <FooterBottom>
-      <div>© 2025 Beamshyft LLC. All rights reserved</div>
+      <div>© 2026 Beamshyft LLC. All rights reserved</div>
       <div className="flex items-center gap-4">
       </div>
     </FooterBottom>
