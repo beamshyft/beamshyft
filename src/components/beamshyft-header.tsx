@@ -76,7 +76,7 @@ export const BeamshyftHeader = () => {
         <NavigationMenuList className={invert ? "invert" : ""}>
           <NavigationMenuItem>
             <Link to="/">
-              <BeamshyftLogo width={180} style={{paddingRight: "18px"}}/>
+              <BeamshyftLogo width={90} style={{paddingRight: "18px"}}/>
             </Link>
           </NavigationMenuItem>
           {navItems.map((item, index) => (
